@@ -112,6 +112,16 @@ section{padding:84px 0;border-top:1px solid var(--line)}
 @media (max-width:900px){.steps{grid-template-columns:1fr 1fr}.step:nth-child(3){border-left:0}.step:nth-child(n+3){border-top:1px solid var(--line)}}
 @media (max-width:520px){.steps{grid-template-columns:1fr}.step{border-left:0;border-top:1px solid var(--line)}.step:first-child{border-top:0}}
 
+.steps.six{grid-template-columns:repeat(3,1fr)}
+.steps.six .step:nth-child(4){border-left:0}
+.steps.six .step:nth-child(n+4){border-top:1px solid var(--line)}
+.steps.six .step h3{font-size:26px}
+@media (max-width:900px){.steps.six{grid-template-columns:1fr 1fr}.steps.six .step:nth-child(n){border-left:1px solid var(--line);border-top:1px solid var(--line)}.steps.six .step:nth-child(odd){border-left:0}.steps.six .step:nth-child(-n+2){border-top:0}}
+@media (max-width:520px){.steps.six{grid-template-columns:1fr}.steps.six .step{border-left:0!important}.steps.six .step:nth-child(n+2){border-top:1px solid var(--line)}.steps.six .step:first-child{border-top:0}}
+.sub{margin:56px 0 20px;font-size:clamp(24px,3vw,34px);font-weight:800}
+.bd{margin:2px 0 0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:13.5px;line-height:1.45;color:#c9cfea}
+.bd dt{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--signal);padding-top:2px}
+.bd dd{margin:0}
 /* stack */
 .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .col h3{font-size:22px;font-weight:800;margin-bottom:14px}
@@ -192,6 +202,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
           <h3>Bet me a hundred</h3>
           <span class="mono prod">Wine glasses · Tavola</span>
           <p>A challenge format. The bet is the hook, a numbered blind test keeps people watching, and the reveal pays it off.</p>
+          <dl class="bd"><dt>Hook</dt><dd>The bet itself, "Bet me a hundred".</dd><dt>Made with</dt><dd>Flow (Nano Banana frames, Omni Flash), CapCut</dd></dl>
         </article>
 
         <article class="card">
@@ -203,6 +214,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
           <h3>Why your teeth stay yellow</h3>
           <span class="mono prod">Oral care · Brightmoor</span>
           <p>Story-driven animation. A curiosity hook, one scene per beat, burned-in captions and a product reveal at the turn.</p>
+          <dl class="bd"><dt>Hook</dt><dd>A curiosity question about yellow teeth.</dd><dt>Made with</dt><dd>Nano Banana frames, Muse, VoiceStudio narration, CapCut</dd></dl>
         </article>
 
         <article class="card">
@@ -214,6 +226,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
           <h3>The $180 jar vs the $29 serum</h3>
           <span class="mono prod">Skincare · Lumivee</span>
           <p>Claymation characters argue the comparison. Big keyword captions, fast scene changes, and a close on proof and guarantee.</p>
+          <dl class="bd"><dt>Hook</dt><dd>A price fight: $180 vs $29.</dd><dt>Made with</dt><dd>Flow (Omni Flash), CapCut</dd></dl>
         </article>
 
         <article class="card">
@@ -225,6 +238,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
           <h3>The night I finally slept</h3>
           <span class="mono prod">Sleep · Hush</span>
           <p>A testimonial that opens on the result, walks back through the problem, then lands on the product with calm pacing and a soft call to action.</p>
+          <dl class="bd"><dt>Hook</dt><dd>Opens on the result, then walks back through the problem.</dd><dt>Made with</dt><dd>Flow, VoiceStudio voice, CapCut</dd></dl>
         </article>
 
         <article class="card">
@@ -236,6 +250,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
           <h3>Kestrel</h3>
           <span class="mono prod">Hair care · podcast-set ad</span>
           <p>Several speakers on a podcast set, cut tight to the line. Bold word-by-word captions and the product in hand at the right beat.</p>
+          <dl class="bd"><dt>Hook</dt><dd>A podcast-set exchange, cut tight to the line.</dd><dt>Made with</dt><dd>Muse, voice reference, CapCut</dd></dl>
         </article>
 
       </div>
@@ -250,9 +265,18 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 <section id="method">
   <div class="wrap">
     <div class="sec-h">
-      <h2>How I cut an ad</h2>
-      <p>Four jobs in every edit, in the order the viewer meets them.</p>
+      <h2>How an ad gets made</h2>
+      <p>My process, from a reference that already works to a clean file you can test.</p>
     </div>
+    <div class="steps six">
+      <div class="step"><span class="mono">01</span><h3>Find the structure</h3><p>I break down an ad that is already scaling: what it wants the viewer to feel and where it takes them. The structure, not the frames.</p></div>
+      <div class="step"><span class="mono">02</span><h3>Model the copy</h3><p>The script is rewritten for the new product from that structure. I don't translate line by line.</p></div>
+      <div class="step"><span class="mono">03</span><h3>Approve face and product</h3><p>The character and the product get approved before any scene is generated, so they stay consistent across every cut.</p></div>
+      <div class="step"><span class="mono">04</span><h3>Prove every line</h3><p>Each line of the script gets a scene that shows it, and the expression matches the line. Everything is moving video.</p></div>
+      <div class="step"><span class="mono">05</span><h3>Cut for retention</h3><p>Fast cuts, edit zooms, captions and sound effects, with the hook cut first and tested on its own.</p></div>
+      <div class="step"><span class="mono">06</span><h3>Deliver clean</h3><p>One final MP4 plus the editable project, with a fixed file name so nobody gets lost between versions.</p></div>
+    </div>
+    <h3 class="sub">What every cut is doing</h3>
     <div class="steps">
       <div class="step"><span class="mono">01</span><h3>Hook</h3><p>The opening line and first image get their own edit. I treat them as the part of the ad that most needs testing.</p></div>
       <div class="step"><span class="mono">02</span><h3>Hold</h3><p>Pacing, captions and a new visual beat every few seconds keep attention moving through the body.</p></div>
