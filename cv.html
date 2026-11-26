@@ -97,7 +97,7 @@ ul.b li{margin:0 0 6px}
 <article class="doc" id="en" lang="en">
   <header>
     <h1>Miguel Albert</h1>
-    <p class="role">DTC Video Editor · Short-form ads</p>
+    <p class="role">DTC Video Editor · AI Video Creator</p>
     <ul class="meta">
       <li>Remote · Teresina, Brazil (UTC−3)</li>
       <li><a href="mailto:miguelalbert38@gmail.com">miguelalbert38@gmail.com</a></li>
@@ -146,7 +146,7 @@ ul.b li{margin:0 0 6px}
 <article class="doc" id="pt" lang="pt-BR">
   <header>
     <h1>Miguel Albert</h1>
-    <p class="role">Editor de vídeo DTC · Anúncios curtos</p>
+    <p class="role">Editor de vídeo DTC · Criador de vídeo com IA</p>
     <ul class="meta">
       <li>Remoto · Teresina, Brasil (UTC−3)</li>
       <li><a href="mailto:miguelalbert38@gmail.com">miguelalbert38@gmail.com</a></li>
@@ -197,19 +197,34 @@ ul.b li{margin:0 0 6px}
 (function(){
   var body=document.body, dl=document.getElementById('dl');
   var btns=[].slice.call(document.querySelectorAll('.seg button'));
-  function setLang(l){
+  /* same language choice as the portfolio page: #pt or ?lang=pt in the link, otherwise the saved choice, otherwise English */
+  function setLang(l, save){
     if(l!=='en'&&l!=='pt') l='en';
+    var pt = l==='pt';
     body.setAttribute('data-lang',l);
-    document.documentElement.lang = l==='pt' ? 'pt-BR' : 'en';
+    document.documentElement.lang = pt ? 'pt-BR' : 'en';
+    document.title = pt ? 'Miguel Albert · Editor de vídeo DTC · Currículo' : 'Miguel Albert · DTC Video Editor · CV';
     btns.forEach(function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-set')===l)); });
     dl.href = 'cv-'+l+'.pdf';
-    dl.textContent = l==='pt' ? 'Baixar PDF' : 'Download PDF';
-    document.querySelector('.bar .back').textContent = l==='pt' ? '← Portfólio' : '← Portfolio';
-    try{ history.replaceState(null,'', l==='pt' ? '#pt' : location.pathname + location.search); }catch(e){}
+    dl.textContent = pt ? 'Baixar PDF' : 'Download PDF';
+    var back = document.querySelector('.bar .back');
+    back.textContent = pt ? '← Portfólio' : '← Portfolio';
+    back.setAttribute('href', pt ? './?lang=pt' : './');
+    if (save) {
+      try{ localStorage.setItem('lang', l); }catch(e){}
+      try{ history.replaceState(null,'', location.pathname + (pt ? '#pt' : '')); }catch(e){}
+    }
   }
-  btns.forEach(function(b){ b.addEventListener('click', function(){ setLang(b.getAttribute('data-set')); }); });
-  var h=(location.hash||'').replace('#','');
-  setLang(h==='pt' ? 'pt' : (new URLSearchParams(location.search).get('lang')==='pt' ? 'pt' : 'en'));
+  btns.forEach(function(b){ b.addEventListener('click', function(){ setLang(b.getAttribute('data-set'), true); }); });
+  var start='en';
+  try{
+    var h=(location.hash||'').replace('#','');
+    var q=new URLSearchParams(location.search).get('lang');
+    if (h==='pt'||h==='en') start=h;
+    else if (q==='pt'||q==='en') start=q;
+    else if (localStorage.getItem('lang')==='pt') start='pt';
+  }catch(e){}
+  setLang(start, false);
 })();
 </script>
 </body>

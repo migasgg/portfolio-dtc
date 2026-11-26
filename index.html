@@ -3,17 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Miguel Albert · DTC Video Editor</title>
-<meta name="description" content="DTC video editor from Brazil. UGC, talking-head, 3D and claymation ads built for hook rate and retention. Open to a paid test edit.">
+<title>Miguel Albert · DTC Video Editor &amp; AI Video Creator</title>
+<meta name="description" content="DTC video editor and AI video creator from Brazil. UGC, talking-head, 3D and claymation ads built for hook rate and retention. Open to a paid test edit.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230c0f1a'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23ff5a36'/%3E%3C/svg%3E">
 <link rel="canonical" href="https://portfolio-dtc.vercel.app/">
+<link rel="alternate" hreflang="en" href="https://portfolio-dtc.vercel.app/">
+<link rel="alternate" hreflang="pt-BR" href="https://portfolio-dtc.vercel.app/?lang=pt">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Miguel Albert · DTC Video Editor">
+<meta property="og:title" content="Miguel Albert · DTC Video Editor & AI Video Creator">
 <meta property="og:description" content="Short-form DTC ads: UGC, talking-head, 3D and claymation. Watch the reel, then send a brief.">
 <meta property="og:url" content="https://portfolio-dtc.vercel.app/">
 <meta property="og:image" content="https://portfolio-dtc.vercel.app/media/fragrance.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Miguel Albert · DTC Video Editor">
+<meta name="twitter:title" content="Miguel Albert · DTC Video Editor & AI Video Creator">
 <meta name="twitter:image" content="https://portfolio-dtc.vercel.app/media/fragrance.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -142,6 +144,27 @@ section{padding:84px 0;border-top:1px solid var(--line)}
 footer{padding:28px 0 40px;border-top:1px solid var(--line)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 @media (max-width:560px){.about{grid-template-columns:1fr}}
+
+/* language switch + CV link in the timeline bar */
+.tl .tools{display:flex;align-items:center;gap:12px}
+.cvlink{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
+.cvlink:hover{color:var(--paper)}
+.seg{display:inline-flex;border:1.5px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.seg button{font:inherit;font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:5px 10px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.seg button:hover{color:var(--paper)}
+.seg button[aria-pressed="true"]{background:var(--signal);color:#fff}
+@media (max-width:700px){.cvlink{display:none}}
+@media (max-width:560px){.tl .wrap{gap:10px}.seg button{padding:5px 7px}}
+/* stack groups */
+.col h3.mt{margin-top:28px}
+.grp{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:16px 0 8px}
+.col h3 + .grp{margin-top:0}
+/* how we'd work */
+.wwh{font-size:24px;font-weight:800;margin:4px 0 14px}
+.ww{list-style:none;padding:0;margin:0 0 32px;display:grid;grid-template-columns:repeat(5,1fr);border:1.5px solid var(--line);border-radius:18px;overflow:hidden}
+.ww li{padding:16px 16px 18px;background:var(--panel);border-left:1px solid var(--line);display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.4}
+.ww li:first-child{border-left:0}
+@media (max-width:900px){.ww{grid-template-columns:1fr}.ww li{border-left:0;border-top:1px solid var(--line);flex-direction:row;align-items:baseline;gap:14px}.ww li:first-child{border-top:0}}
 </style>
 </head>
 <body>
@@ -149,14 +172,21 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 <header class="tl">
   <div class="wrap">
     <a class="mark" href="#hook"><i></i><span>Miguel Albert</span></a>
-    <nav aria-label="Sections">
-      <a href="#hook">Hook</a>
-      <a href="#work">Work</a>
-      <a href="#method">Method</a>
-      <a href="#stack">Stack</a>
-      <a href="#close">Close</a>
+    <nav aria-label="Sections" data-i18n-aria="nav.aria">
+      <a href="#hook" data-i18n="nav.hook">Hook</a>
+      <a href="#work" data-i18n="nav.work">Work</a>
+      <a href="#method" data-i18n="nav.method">Method</a>
+      <a href="#stack" data-i18n="nav.stack">Stack</a>
+      <a href="#close" data-i18n="nav.close">Close</a>
       <div class="head" id="head" aria-hidden="true"></div>
     </nav>
+    <div class="tools">
+      <a class="cvlink" href="cv.html">CV</a>
+      <div class="seg" role="group" aria-label="Language">
+        <button type="button" data-set="en" aria-pressed="true">EN</button>
+        <button type="button" data-set="pt" aria-pressed="false">PT</button>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -164,20 +194,20 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 <div id="hook" class="hero">
   <div class="wrap">
     <div>
-      <p class="mono">DTC video editor · Short-form ads</p>
-      <h1>The first three seconds decide the ad. <em>I edit them first.</em></h1>
-      <p class="lede">I'm Miguel, a video editor from Brazil. I cut short-form ads for DTC brands: UGC, talking-head, 3D and claymation, with an AI video stack behind them. Two years of editing ads that have to sell. Open to a paid test edit.</p>
+      <p class="mono" data-i18n="hero.kicker">DTC video editor · AI video creator</p>
+      <h1 data-i18n="hero.h1">The first three seconds decide the ad. <em>I edit them first.</em></h1>
+      <p class="lede" data-i18n="hero.lede">I'm Miguel, a video editor and AI video creator from Brazil. I cut short-form ads for DTC brands: UGC, talking-head, 3D and claymation, and I generate the scenes myself with an AI video stack. Two years of editing ads that have to sell. Open to a paid test edit.</p>
       <div class="cta">
-        <a class="btn main" href="#work">Watch the reel</a>
-        <a class="btn" href="https://www.linkedin.com/in/miguel-albert/" target="_blank" rel="noopener">Message me on LinkedIn</a>
+        <a class="btn main" href="#work" data-i18n="hero.cta1">Watch the reel</a>
+        <a class="btn" href="https://www.linkedin.com/in/miguel-albert/" target="_blank" rel="noopener" data-i18n="cta.linkedin">Message me on LinkedIn</a>
       </div>
       <ul class="facts">
-        <li><b>2+ yrs</b> editing paid ads</li>
-        <li><b>Remote</b> · UTC−3</li>
-        <li><b>PT</b> native · <b>EN</b> conversational</li>
+        <li data-i18n="fact.1"><b>2+ yrs</b> editing paid ads</li>
+        <li data-i18n="fact.2"><b>Remote</b> · UTC−3</li>
+        <li data-i18n="fact.3"><b>PT</b> native · <b>EN</b> conversational</li>
       </ul>
     </div>
-    <div class="phone" aria-label="Preview of a claymation ad">
+    <div class="phone" aria-label="Preview of a claymation ad" data-i18n-aria="hero.phone">
       <video id="heroVid" src="media/fragrance.mp4" poster="media/fragrance.jpg" muted loop playsinline autoplay preload="metadata"></video>
       <div class="tc"><i></i><span id="tc">00:00:00</span></div>
     </div>
@@ -187,11 +217,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 <section id="work">
   <div class="wrap">
     <div class="sec-h">
-      <h2>The body of the ad</h2>
-      <p>Five edits for fictional concept brands. Tap the speaker on any card for sound. Swipe or use the arrows.</p>
+      <h2 data-i18n="work.h2">The body of the ad</h2>
+      <p data-i18n="work.p">Five edits for fictional concept brands. Tap the speaker on any card for sound. Swipe or use the arrows.</p>
     </div>
     <div class="reel-wrap">
-      <div class="reel" id="reel" tabindex="0" aria-label="Portfolio videos, scroll sideways">
+      <div class="reel" id="reel" tabindex="0" aria-label="Portfolio videos, scroll sideways" data-i18n-aria="work.reel">
 
         <article class="card">
           <div class="vid">
@@ -200,33 +230,33 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
             <button class="snd" aria-label="Toggle sound" aria-pressed="false"><svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m16 9 5 6m0-6-5 6"/></svg><svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></button>
           </div>
           <h3>Bet me a hundred</h3>
-          <span class="mono prod">Wine glasses · Tavola</span>
-          <p>A challenge format. The bet is the hook, a numbered blind test keeps people watching, and the reveal pays it off.</p>
-          <dl class="bd"><dt>Hook</dt><dd>The bet itself, "Bet me a hundred".</dd><dt>Made with</dt><dd>Flow (Nano Banana frames, Omni Flash), CapCut</dd></dl>
+          <span class="mono prod" data-i18n="wine.prod">Wine glasses · Tavola</span>
+          <p data-i18n="wine.p">A challenge format. The bet is the hook, a numbered blind test keeps people watching, and the reveal pays it off.</p>
+          <dl class="bd"><dt data-i18n="lbl.hook">Hook</dt><dd data-i18n="wine.hook">The bet itself, "Bet me a hundred".</dd><dt data-i18n="lbl.made">Made with</dt><dd>Flow (Nano Banana frames, Omni Flash), CapCut</dd></dl>
         </article>
 
         <article class="card">
           <div class="vid">
             <video data-reel src="media/teeth.mp4" poster="media/teeth.jpg" muted loop playsinline preload="metadata"></video>
-            <span class="pill">3D animated ad</span>
+            <span class="pill" data-i18n="pill.3d">3D animated ad</span>
             <button class="snd" aria-label="Toggle sound" aria-pressed="false"><svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m16 9 5 6m0-6-5 6"/></svg><svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></button>
           </div>
           <h3>Why your teeth stay yellow</h3>
-          <span class="mono prod">Oral care · Brightmoor</span>
-          <p>Story-driven animation. A curiosity hook, one scene per beat, burned-in captions and a product reveal at the turn.</p>
-          <dl class="bd"><dt>Hook</dt><dd>A curiosity question about yellow teeth.</dd><dt>Made with</dt><dd>Nano Banana frames, Muse, VoiceStudio narration, CapCut</dd></dl>
+          <span class="mono prod" data-i18n="teeth.prod">Oral care · Brightmoor</span>
+          <p data-i18n="teeth.p">Story-driven animation. A curiosity hook, one scene per beat, burned-in captions and a product reveal at the turn.</p>
+          <dl class="bd"><dt data-i18n="lbl.hook">Hook</dt><dd data-i18n="teeth.hook">A curiosity question about yellow teeth.</dd><dt data-i18n="lbl.made">Made with</dt><dd data-i18n="teeth.made">Nano Banana frames, Muse, VoiceStudio narration, CapCut</dd></dl>
         </article>
 
         <article class="card">
           <div class="vid">
             <video data-reel src="media/fragrance.mp4" poster="media/fragrance.jpg" muted loop playsinline preload="metadata"></video>
-            <span class="pill">Claymation ad</span>
+            <span class="pill" data-i18n="pill.clay">Claymation ad</span>
             <button class="snd" aria-label="Toggle sound" aria-pressed="false"><svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m16 9 5 6m0-6-5 6"/></svg><svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></button>
           </div>
           <h3>The $180 jar vs the $29 serum</h3>
           <span class="mono prod">Skincare · Lumivee</span>
-          <p>Claymation characters argue the comparison. Big keyword captions, fast scene changes, and a close on proof and guarantee.</p>
-          <dl class="bd"><dt>Hook</dt><dd>A price fight: $180 vs $29.</dd><dt>Made with</dt><dd>Flow (Omni Flash), CapCut</dd></dl>
+          <p data-i18n="frag.p">Claymation characters argue the comparison. Big keyword captions, fast scene changes, and a close on proof and guarantee.</p>
+          <dl class="bd"><dt data-i18n="lbl.hook">Hook</dt><dd data-i18n="frag.hook">A price fight: $180 vs $29.</dd><dt data-i18n="lbl.made">Made with</dt><dd>Flow (Omni Flash), CapCut</dd></dl>
         </article>
 
         <article class="card">
@@ -236,9 +266,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
             <button class="snd" aria-label="Toggle sound" aria-pressed="false"><svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m16 9 5 6m0-6-5 6"/></svg><svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></button>
           </div>
           <h3>The night I finally slept</h3>
-          <span class="mono prod">Sleep · Hush</span>
-          <p>A testimonial that opens on the result, walks back through the problem, then lands on the product with calm pacing and a soft call to action.</p>
-          <dl class="bd"><dt>Hook</dt><dd>Opens on the result, then walks back through the problem.</dd><dt>Made with</dt><dd>Flow, VoiceStudio voice, CapCut</dd></dl>
+          <span class="mono prod" data-i18n="sleep.prod">Sleep · Hush</span>
+          <p data-i18n="sleep.p">A testimonial that opens on the result, walks back through the problem, then lands on the product with calm pacing and a soft call to action.</p>
+          <dl class="bd"><dt data-i18n="lbl.hook">Hook</dt><dd data-i18n="sleep.hook">Opens on the result, then walks back through the problem.</dd><dt data-i18n="lbl.made">Made with</dt><dd data-i18n="sleep.made">Flow, VoiceStudio voice, CapCut</dd></dl>
         </article>
 
         <article class="card">
@@ -248,15 +278,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
             <button class="snd" aria-label="Toggle sound" aria-pressed="false"><svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m16 9 5 6m0-6-5 6"/></svg><svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></button>
           </div>
           <h3>Kestrel</h3>
-          <span class="mono prod">Hair care · podcast-set ad</span>
-          <p>Several speakers on a podcast set, cut tight to the line. Bold word-by-word captions and the product in hand at the right beat.</p>
-          <dl class="bd"><dt>Hook</dt><dd>A podcast-set exchange, cut tight to the line.</dd><dt>Made with</dt><dd>Muse, voice reference, CapCut</dd></dl>
+          <span class="mono prod" data-i18n="kes.prod">Hair care · podcast-set ad</span>
+          <p data-i18n="kes.p">Several speakers on a podcast set, cut tight to the line. Bold word-by-word captions and the product in hand at the right beat.</p>
+          <dl class="bd"><dt data-i18n="lbl.hook">Hook</dt><dd data-i18n="kes.hook">A podcast-set exchange, cut tight to the line.</dd><dt data-i18n="lbl.made">Made with</dt><dd data-i18n="kes.made">Muse, voice reference, CapCut</dd></dl>
         </article>
 
       </div>
-      <div class="ctrl" aria-label="Carousel controls">
-        <button id="prev" aria-label="Previous video">←</button>
-        <button id="next" aria-label="Next video">→</button>
+      <div class="ctrl">
+        <button id="prev" aria-label="Previous video" data-i18n-aria="work.prev">←</button>
+        <button id="next" aria-label="Next video" data-i18n-aria="work.next">→</button>
       </div>
     </div>
   </div>
@@ -265,23 +295,23 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 <section id="method">
   <div class="wrap">
     <div class="sec-h">
-      <h2>How an ad gets made</h2>
-      <p>My process, from a reference that already works to a clean file you can test.</p>
+      <h2 data-i18n="m.h2">How an ad gets made</h2>
+      <p data-i18n="m.p">My process, from a reference that already works to a clean file you can test.</p>
     </div>
     <div class="steps six">
-      <div class="step"><span class="mono">01</span><h3>Find the structure</h3><p>I break down an ad that is already scaling: what it wants the viewer to feel and where it takes them. The structure, not the frames.</p></div>
-      <div class="step"><span class="mono">02</span><h3>Model the copy</h3><p>The script is rewritten for the new product from that structure. I don't translate line by line.</p></div>
-      <div class="step"><span class="mono">03</span><h3>Approve face and product</h3><p>The character and the product get approved before any scene is generated, so they stay consistent across every cut.</p></div>
-      <div class="step"><span class="mono">04</span><h3>Prove every line</h3><p>Each line of the script gets a scene that shows it, and the expression matches the line. Everything is moving video.</p></div>
-      <div class="step"><span class="mono">05</span><h3>Cut for retention</h3><p>Fast cuts, edit zooms, captions and sound effects, with the hook cut first and tested on its own.</p></div>
-      <div class="step"><span class="mono">06</span><h3>Deliver clean</h3><p>One final MP4 plus the editable project, with a fixed file name so nobody gets lost between versions.</p></div>
+      <div class="step"><span class="mono">01</span><h3 data-i18n="m.1h">Find the structure</h3><p data-i18n="m.1p">I break down an ad that is already scaling: what it wants the viewer to feel and where it takes them. The structure, not the frames.</p></div>
+      <div class="step"><span class="mono">02</span><h3 data-i18n="m.2h">Model the copy</h3><p data-i18n="m.2p">The script is rewritten for the new product from that structure. I don't translate line by line.</p></div>
+      <div class="step"><span class="mono">03</span><h3 data-i18n="m.3h">Approve face and product</h3><p data-i18n="m.3p">The character and the product get approved before any scene is generated, so they stay consistent across every cut.</p></div>
+      <div class="step"><span class="mono">04</span><h3 data-i18n="m.4h">Prove every line</h3><p data-i18n="m.4p">Each line of the script gets a scene that shows it, and the expression matches the line. Everything is moving video.</p></div>
+      <div class="step"><span class="mono">05</span><h3 data-i18n="m.5h">Cut for retention</h3><p data-i18n="m.5p">Fast cuts, edit zooms, captions and sound effects, with the hook cut first and tested on its own.</p></div>
+      <div class="step"><span class="mono">06</span><h3 data-i18n="m.6h">Deliver clean</h3><p data-i18n="m.6p">One final MP4 plus the editable project, with a fixed file name so nobody gets lost between versions.</p></div>
     </div>
-    <h3 class="sub">What every cut is doing</h3>
+    <h3 class="sub" data-i18n="c.sub">What every cut is doing</h3>
     <div class="steps">
-      <div class="step"><span class="mono">01</span><h3>Hook</h3><p>The opening line and first image get their own edit. I treat them as the part of the ad that most needs testing.</p></div>
-      <div class="step"><span class="mono">02</span><h3>Hold</h3><p>Pacing, captions and a new visual beat every few seconds keep attention moving through the body.</p></div>
-      <div class="step"><span class="mono">03</span><h3>Proof</h3><p>Demos, comparisons and social proof sit where the viewer's doubt appears, not at the end.</p></div>
-      <div class="step"><span class="mono">04</span><h3>Close</h3><p>One clear offer and one call to action, placed when the viewer is ready to act.</p></div>
+      <div class="step"><span class="mono">01</span><h3 data-i18n="c.1h">Hook</h3><p data-i18n="c.1p">The opening line and first image get their own edit. I treat them as the part of the ad that most needs testing.</p></div>
+      <div class="step"><span class="mono">02</span><h3 data-i18n="c.2h">Hold</h3><p data-i18n="c.2p">Pacing, captions and a new visual beat every few seconds keep attention moving through the body.</p></div>
+      <div class="step"><span class="mono">03</span><h3 data-i18n="c.3h">Proof</h3><p data-i18n="c.3p">Demos, comparisons and social proof sit where the viewer's doubt appears, not at the end.</p></div>
+      <div class="step"><span class="mono">04</span><h3 data-i18n="c.4h">Close</h3><p data-i18n="c.4p">One clear offer and one call to action, placed when the viewer is ready to act.</p></div>
     </div>
   </div>
 </section>
@@ -289,16 +319,32 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 <section id="stack">
   <div class="wrap">
     <div class="sec-h">
-      <h2>What I work with</h2>
-      <p>The formats I edit, the AI tools I use every day, and the categories in the reel.</p>
+      <h2 data-i18n="s.h2">What I work with</h2>
+      <p data-i18n="s.p">The formats I edit, the tools behind every ad, and the categories in the reel.</p>
     </div>
     <div class="cols">
-      <div class="col"><h3>Formats</h3>
-        <ul class="tags"><li>UGC</li><li>AI UGC</li><li>3D animated ads</li><li>Claymation ads</li><li>Talking-head</li><li>Podcast-set ads</li><li>Testimonial ads</li><li>Short-form ads</li></ul></div>
-      <div class="col"><h3>AI video stack</h3>
-        <ul class="tags"><li>Higgsfield</li><li>Google Flow</li><li>Omni Flash</li><li>Kling</li><li>Seedance</li><li>Wan</li><li>Magnific</li></ul></div>
-      <div class="col"><h3>Categories</h3>
-        <ul class="tags"><li>Skincare</li><li>Hair care</li><li>Oral care</li><li>Sleep</li><li>Drinkware</li></ul></div>
+      <div class="col">
+        <h3 data-i18n="s.formats">Formats</h3>
+        <ul class="tags" data-i18n="s.formats.list"><li>UGC</li><li>AI UGC</li><li>3D animated ads</li><li>Claymation ads</li><li>Talking-head</li><li>Podcast-set ads</li><li>Testimonial ads</li><li>Short-form ads</li></ul>
+        <h3 class="mt" data-i18n="s.cats">Categories</h3>
+        <ul class="tags" data-i18n="s.cats.list"><li>Skincare</li><li>Hair care</li><li>Oral care</li><li>Sleep</li><li>Drinkware</li></ul>
+      </div>
+      <div class="col">
+        <h3 data-i18n="s.ai">AI toolkit</h3>
+        <p class="grp" data-i18n="s.g.video">Video</p>
+        <ul class="tags"><li>Higgsfield</li><li>Google Flow</li><li>Omni Flash</li><li>Kling</li><li>Seedance</li><li>Wan</li><li>Muse</li></ul>
+        <p class="grp" data-i18n="s.g.image">Image and upscale</p>
+        <ul class="tags"><li>Nano Banana</li><li>Magnific</li></ul>
+        <p class="grp" data-i18n="s.g.voice">Voice</p>
+        <ul class="tags"><li>VoiceStudio</li></ul>
+      </div>
+      <div class="col">
+        <h3 data-i18n="s.edit">Editing</h3>
+        <p class="grp" data-i18n="s.g.soft">Software</p>
+        <ul class="tags"><li>CapCut</li><li>Premiere Pro</li></ul>
+        <p class="grp" data-i18n="s.g.craft">Craft</p>
+        <ul class="tags" data-i18n="s.craft.list"><li>Hook-first pacing</li><li>Captions</li><li>Edit zooms</li><li>Sound design</li><li>Retention cuts</li><li>Hook variants</li></ul>
+      </div>
     </div>
   </div>
 </section>
@@ -308,9 +354,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     <div class="about nophoto" id="aboutBox">
       <img class="me gone" id="me" src="media/miguel.jpg" alt="Miguel Albert">
       <div>
-        <div class="sec-h" style="margin-bottom:20px"><h2>Who is cutting your ad</h2></div>
-        <p>I'm Miguel Albert, known as Migas, a video editor based in Teresina, Brazil. For over two years I've edited paid ads in a team that ships several a day, where the video has to earn its place by selling.</p>
-        <p>My focus is DTC creative, and the work above shows it: AI-assisted ads, UGC, animated and talking-head formats. I work remote on UTC−3, in Portuguese and conversational English, and I take feedback fast.</p>
+        <div class="sec-h" style="margin-bottom:20px"><h2 data-i18n="a.h2">Who is cutting your ad</h2></div>
+        <p data-i18n="a.1">I'm Miguel Albert, known as Migas, based in Teresina, Brazil. I started in computer science, became a video maker, then edited paid ads and VSLs for direct response, where every video has to earn its place by selling.</p>
+        <p data-i18n="a.2">Today my focus is DTC creative. I bring that direct-response discipline into every ad and produce the scenes myself with AI: UGC, animated and talking-head formats. I work remote on UTC−3, in Portuguese and conversational English, and I take feedback fast.</p>
       </div>
     </div>
   </div>
@@ -318,12 +364,21 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 
 <section id="close">
   <div class="wrap close">
-    <h2>Got a brief? <em>Send it.</em></h2>
-    <p>I'm looking for a full-time DTC video editor role. Send a brief and I'll cut a test edit; paid tests are welcome. LinkedIn or email is the fastest way to reach me, and WhatsApp works too.</p>
+    <h2 data-i18n="cl.h2">Got a brief? <em>Send it.</em></h2>
+    <p data-i18n="cl.p">I'm looking for a full-time DTC video editor role. Send a brief and I'll cut a test edit; paid tests are welcome. LinkedIn or email is the fastest way to reach me, and WhatsApp works too.</p>
+    <h3 class="wwh" data-i18n="w.h">How we'd work</h3>
+    <ol class="ww">
+      <li><span class="mono">01</span><span data-i18n="w.1">You send the brief</span></li>
+      <li><span class="mono">02</span><span data-i18n="w.2">I break it down and write the script for your OK</span></li>
+      <li><span class="mono">03</span><span data-i18n="w.3">I produce and cut the first version</span></li>
+      <li><span class="mono">04</span><span data-i18n="w.4">You review, I revise</span></li>
+      <li><span class="mono">05</span><span data-i18n="w.5">You get the final MP4 and the editable project</span></li>
+    </ol>
     <div class="cta">
-      <a class="btn main" href="https://www.linkedin.com/in/miguel-albert/" target="_blank" rel="noopener">Message me on LinkedIn</a>
+      <a class="btn main" href="https://www.linkedin.com/in/miguel-albert/" target="_blank" rel="noopener" data-i18n="cta.linkedin">Message me on LinkedIn</a>
       <a class="btn" href="mailto:miguelalbert38@gmail.com">miguelalbert38@gmail.com</a>
       <a class="btn" href="https://wa.me/5586994694008" target="_blank" rel="noopener">WhatsApp +55 86 99469-4008</a>
+      <a class="btn" id="cvpdf" href="cv-en.pdf" download data-i18n="cta.cv">Download CV (PDF)</a>
     </div>
   </div>
 </section>
@@ -331,14 +386,119 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 
 <footer>
   <div class="wrap">
-    <span class="mono">Miguel Albert · Video editor · miguelalbert38@gmail.com</span>
-    <span class="mono"><a href="cv.html">CV · EN</a> · <a href="cv.html#pt">PT</a> · Teresina, Brazil · UTC−3</span>
+    <span class="mono" data-i18n="f.1">Miguel Albert · DTC video editor &amp; AI video creator · miguelalbert38@gmail.com</span>
+    <span class="mono" data-i18n="f.2"><a href="cv.html">CV</a> · Teresina, Brazil · UTC−3</span>
   </div>
 </footer>
 
 <script>
 (function(){
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- language: EN is the page default, PT is optional ---------- */
+  var PT = {
+    'nav.aria':'Seções','nav.hook':'Gancho','nav.work':'Trabalhos','nav.method':'Método','nav.stack':'Stack','nav.close':'Contato',
+    'hero.kicker':'Editor de vídeo DTC · Criador de vídeo com IA',
+    'hero.h1':'Os três primeiros segundos decidem o anúncio. <em>Eu edito eles primeiro.</em>',
+    'hero.lede':'Sou o Miguel, editor de vídeo e criador de vídeo com IA, do Brasil. Edito anúncios curtos para marcas DTC: UGC, talking-head, 3D e claymation, e gero as cenas eu mesmo com uma stack de vídeo com IA. Dois anos editando anúncios que precisam vender. Aberto a uma edição de teste paga.',
+    'hero.cta1':'Ver os vídeos','cta.linkedin':'Fale comigo no LinkedIn','cta.cv':'Baixar CV (PDF)',
+    'fact.1':'<b>2+ anos</b> editando anúncios pagos','fact.2':'<b>Remoto</b> · UTC−3','fact.3':'<b>PT</b> nativo · <b>EN</b> conversacional',
+    'hero.phone':'Prévia de um anúncio em claymation',
+    'work.h2':'O corpo do anúncio',
+    'work.p':'Cinco edições para marcas conceito fictícias. Toque no alto-falante de qualquer card para ouvir. Arraste ou use as setas.',
+    'work.reel':'Vídeos do portfólio, role para o lado','work.prev':'Vídeo anterior','work.next':'Próximo vídeo','snd':'Ligar ou desligar o som',
+    'lbl.hook':'Gancho','lbl.made':'Feito com',
+    'pill.3d':'Anúncio em 3D','pill.clay':'Anúncio em claymation',
+    'wine.prod':'Taças de vinho · Tavola',
+    'wine.p':'Formato de desafio. A aposta é o gancho, um teste cego numerado prende a atenção e a revelação fecha.',
+    'wine.hook':'A própria aposta, "Bet me a hundred".',
+    'teeth.prod':'Saúde bucal · Brightmoor',
+    'teeth.p':'Animação narrativa. Gancho de curiosidade, uma cena por batida, legendas queimadas e o produto revelado na virada.',
+    'teeth.hook':'Uma pergunta de curiosidade sobre dentes amarelos.',
+    'teeth.made':'Frames no Nano Banana, Muse, narração no VoiceStudio, CapCut',
+    'frag.p':'Personagens de massinha discutem a comparação. Legendas grandes de palavra-chave, trocas rápidas de cena e fechamento com prova e garantia.',
+    'frag.hook':'Briga de preço: $180 contra $29.',
+    'sleep.prod':'Sono · Hush',
+    'sleep.p':'Um depoimento que abre no resultado, volta ao problema e chega ao produto com ritmo calmo e um CTA suave.',
+    'sleep.hook':'Abre no resultado e depois volta ao problema.',
+    'sleep.made':'Flow, voz no VoiceStudio, CapCut',
+    'kes.prod':'Cabelo · anúncio em cenário de podcast',
+    'kes.p':'Vários falantes em um cenário de podcast, cortados rente à fala. Legendas palavra por palavra e o produto na mão no momento certo.',
+    'kes.hook':'Uma troca no podcast, cortada rente à fala.',
+    'kes.made':'Muse, referência de voz, CapCut',
+    'm.h2':'Como um anúncio é feito',
+    'm.p':'Meu processo, de uma referência que já funciona até um arquivo limpo, pronto para testar.',
+    'm.1h':'Achar a estrutura','m.1p':'Decupo um anúncio que já está escalando: o que ele quer que o espectador sinta e para onde o leva. A estrutura, não os frames.',
+    'm.2h':'Modelar a copy','m.2p':'O roteiro é reescrito para o novo produto a partir dessa estrutura. Não traduzo linha por linha.',
+    'm.3h':'Aprovar rosto e produto','m.3p':'O personagem e o produto são aprovados antes de gerar qualquer cena, para ficarem iguais em todos os cortes.',
+    'm.4h':'Provar cada fala','m.4p':'Cada fala do roteiro ganha uma cena que a mostra, e a expressão combina com a fala. Tudo é vídeo em movimento.',
+    'm.5h':'Cortar para retenção','m.5p':'Cortes rápidos, zooms de edição, legendas e efeitos sonoros, com o gancho editado primeiro e testado sozinho.',
+    'm.6h':'Entregar limpo','m.6p':'Um MP4 final e o projeto editável, com nome de arquivo fixo para ninguém se perder entre versões.',
+    'c.sub':'O que cada corte está fazendo',
+    'c.1h':'Gancho','c.1p':'A primeira fala e a primeira imagem ganham uma edição própria. Trato isso como a parte do anúncio que mais precisa de teste.',
+    'c.2h':'Retenção','c.2p':'Ritmo, legendas e uma batida visual nova a cada poucos segundos mantêm a atenção no corpo do anúncio.',
+    'c.3h':'Prova','c.3p':'Demonstrações, comparações e prova social ficam onde a dúvida do espectador aparece, não no final.',
+    'c.4h':'Fechamento','c.4p':'Uma oferta clara e um CTA, colocados quando o espectador está pronto para agir.',
+    's.h2':'Com o que eu trabalho',
+    's.p':'Os formatos que edito, as ferramentas por trás de cada anúncio e as categorias dos vídeos.',
+    's.formats':'Formatos',
+    's.formats.list':'<li>UGC</li><li>UGC com IA</li><li>Anúncios em 3D</li><li>Anúncios em claymation</li><li>Talking-head</li><li>Anúncios em cenário de podcast</li><li>Anúncios de depoimento</li><li>Anúncios curtos</li>',
+    's.cats':'Categorias',
+    's.cats.list':'<li>Skincare</li><li>Cabelo</li><li>Saúde bucal</li><li>Sono</li><li>Taças e copos</li>',
+    's.ai':'Ferramentas de IA','s.g.video':'Vídeo','s.g.image':'Imagem e upscale','s.g.voice':'Voz',
+    's.edit':'Edição','s.g.soft':'Programas','s.g.craft':'Técnica',
+    's.craft.list':'<li>Ritmo focado no gancho</li><li>Legendas</li><li>Zooms de edição</li><li>Sound design</li><li>Cortes de retenção</li><li>Variações de gancho</li>',
+    'a.h2':'Quem está editando o seu anúncio',
+    'a.1':'Sou o Miguel Albert, o Migas, de Teresina, Brasil. Comecei em ciência da computação, virei video maker e depois editei anúncios pagos e VSLs de direct response, onde cada vídeo precisa se pagar vendendo.',
+    'a.2':'Hoje meu foco é criativo DTC. Levo essa disciplina de direct response para cada anúncio e produzo as cenas eu mesmo com IA: UGC, animação e talking-head. Trabalho remoto em UTC−3, em português e inglês conversacional, e respondo rápido a feedback.',
+    'cl.h2':'Tem um briefing? <em>Manda.</em>',
+    'cl.p':'Busco uma vaga full-time de editor de vídeo DTC. Mande um briefing e eu faço uma edição de teste; testes pagos são bem-vindos. LinkedIn ou e-mail é o jeito mais rápido de falar comigo, e WhatsApp também funciona.',
+    'w.h':'Como a gente trabalharia',
+    'w.1':'Você manda o briefing','w.2':'Eu decupo e escrevo o roteiro para a sua aprovação','w.3':'Eu produzo e edito a primeira versão','w.4':'Você revisa, eu ajusto','w.5':'Você recebe o MP4 final e o projeto editável',
+    'f.1':'Miguel Albert · Editor de vídeo DTC e criador de vídeo com IA · miguelalbert38@gmail.com',
+    'f.2':'<a href="cv.html">CV</a> · Teresina, Brasil · UTC−3'
+  };
+  var META = {
+    en:{title:'Miguel Albert · DTC Video Editor & AI Video Creator', desc:'DTC video editor and AI video creator from Brazil. UGC, talking-head, 3D and claymation ads built for hook rate and retention. Open to a paid test edit.'},
+    pt:{title:'Miguel Albert · Editor de vídeo DTC e criador de vídeo com IA', desc:'Editor de vídeo DTC e criador de vídeo com IA, do Brasil. Anúncios UGC, talking-head, 3D e claymation feitos para gancho e retenção.'}
+  };
+  var tNodes = [].slice.call(document.querySelectorAll('[data-i18n]'));
+  var aNodes = [].slice.call(document.querySelectorAll('[data-i18n-aria]'));
+  var sndBtns = [].slice.call(document.querySelectorAll('.snd'));
+  tNodes.forEach(function(n){ n._en = n.innerHTML; });
+  aNodes.forEach(function(n){ n._en = n.getAttribute('aria-label'); });
+  var langBtns = [].slice.call(document.querySelectorAll('.seg button'));
+  var descTag = document.querySelector('meta[name="description"]');
+  var cvpdf = document.getElementById('cvpdf');
+
+  function setLang(l, save){
+    l = (l === 'pt') ? 'pt' : 'en';
+    var pt = l === 'pt';
+    tNodes.forEach(function(n){ var k = n.getAttribute('data-i18n'); n.innerHTML = (pt && PT[k] != null) ? PT[k] : n._en; });
+    aNodes.forEach(function(n){ var k = n.getAttribute('data-i18n-aria'); n.setAttribute('aria-label', (pt && PT[k] != null) ? PT[k] : n._en); });
+    sndBtns.forEach(function(b){ b.setAttribute('aria-label', pt ? PT.snd : 'Toggle sound'); });
+    langBtns.forEach(function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-set') === l)); });
+    document.documentElement.lang = pt ? 'pt-BR' : 'en';
+    document.title = META[l].title;
+    if (descTag) descTag.setAttribute('content', META[l].desc);
+    cvpdf.setAttribute('href', pt ? 'cv-pt.pdf' : 'cv-en.pdf');
+    if (save) {
+      try { localStorage.setItem('lang', l); } catch(e){}
+      try {
+        var u = new URL(location.href);
+        if (pt) u.searchParams.set('lang','pt'); else u.searchParams.delete('lang');
+        history.replaceState(null, '', u.pathname + u.search + u.hash);
+      } catch(e){}
+    }
+  }
+  langBtns.forEach(function(b){ b.addEventListener('click', function(){ setLang(b.getAttribute('data-set'), true); }); });
+  var start = 'en';
+  try {
+    var q = new URLSearchParams(location.search).get('lang');
+    if (q === 'pt' || q === 'en') start = q;
+    else if (localStorage.getItem('lang') === 'pt') start = 'pt';
+  } catch(e){}
+  setLang(start, false);
 
   /* playhead follows scroll */
   var head = document.getElementById('head');
@@ -380,7 +540,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   } else {
     vids.forEach(function(v){ v.controls = true; });
   }
-  [].forEach.call(document.querySelectorAll('.snd'), function(b){
+  sndBtns.forEach(function(b){
     var v = b.parentNode.querySelector('video');
     b.addEventListener('click', function(){
       var on = v.muted;
