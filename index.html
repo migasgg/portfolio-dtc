@@ -145,6 +145,18 @@ footer{padding:28px 0 40px;border-top:1px solid var(--line)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 @media (max-width:560px){.about{grid-template-columns:1fr}}
 
+/* services */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:0;padding:0;list-style:none}
+.svc li{background:var(--panel);border:1.5px solid var(--line);border-radius:22px;padding:24px 22px 26px;display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .2s}
+.svc li:hover{border-color:var(--signal);transform:translateY(-3px)}
+.svc .n{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--signal)}
+.svc h3{font-size:22px;font-weight:800;letter-spacing:-.01em}
+.svc p{margin:0;color:#c9cfea;font-size:15px;line-height:1.55;flex:1}
+.svc .bar{display:block;width:34px;height:2px;background:var(--signal);border-radius:2px}
+.svc-note{margin:22px 0 0;color:var(--muted);font-size:15px;max-width:44em}
+@media (max-width:1000px){.svc{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.svc{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.svc li{transition:none}.svc li:hover{transform:none}}
 /* language switch + CV link in the timeline bar */
 .tl .tools{display:flex;align-items:center;gap:12px}
 .cvlink{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
@@ -292,6 +304,22 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   </div>
 </section>
 
+<section id="services">
+  <div class="wrap">
+    <div class="sec-h">
+      <h2 data-i18n="sv.h2">What I can make for you</h2>
+      <p data-i18n="sv.p">Short-form ads for DTC brands, built to be tested.</p>
+    </div>
+    <ul class="svc">
+      <li><span class="n">01</span><h3 data-i18n="sv.1h">AI UGC and testimonial ads</h3><p data-i18n="sv.1p">Creator-style ads with a cast avatar and every scene generated, cut to feel like real UGC. No shoot, no creator to wait on.</p><span class="bar"></span></li>
+      <li><span class="n">02</span><h3 data-i18n="sv.2h">Animated and claymation ads</h3><p data-i18n="sv.2p">3D, Pixar-style and claymation ads that explain the product through a story and hold attention until the reveal.</p><span class="bar"></span></li>
+      <li><span class="n">03</span><h3 data-i18n="sv.3h">Talking-head and podcast-set ads</h3><p data-i18n="sv.3p">Founder, expert or podcast-style ads cut tight to the line, with word-by-word captions and proof on screen.</p><span class="bar"></span></li>
+      <li><span class="n">04</span><h3 data-i18n="sv.4h">Hook variants and iterations</h3><p data-i18n="sv.4p">New hooks and re-cuts of a winning ad, built for creative testing, so what already works keeps working longer.</p><span class="bar"></span></li>
+    </ul>
+    <p class="svc-note" data-i18n="sv.note">Vertical 9:16 first, for Meta, TikTok, YouTube Shorts and Reels. Already have footage? I edit your UGC and creator content too.</p>
+  </div>
+</section>
+
 <section id="method">
   <div class="wrap">
     <div class="sec-h">
@@ -426,6 +454,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     'kes.p':'Vários falantes em um cenário de podcast, cortados rente à fala. Legendas palavra por palavra e o produto na mão no momento certo.',
     'kes.hook':'Uma troca no podcast, cortada rente à fala.',
     'kes.made':'Muse, referência de voz, CapCut',
+    'sv.h2':'O que eu posso criar para você','sv.p':'Anúncios curtos para marcas DTC, feitos para serem testados.',
+    'sv.1h':'Anúncios UGC e de depoimento com IA','sv.1p':'Anúncios no estilo creator, com avatar escolhido e cada cena gerada, editados para parecer UGC real. Sem gravação, sem esperar creator.',
+    'sv.2h':'Anúncios animados e em claymation','sv.2p':'Anúncios em 3D, estilo Pixar e claymation que explicam o produto com uma história e prendem a atenção até a revelação.',
+    'sv.3h':'Talking-head e cenário de podcast','sv.3p':'Anúncios com fundador, especialista ou em formato de podcast, cortados rente à fala, com legendas palavra por palavra e prova na tela.',
+    'sv.4h':'Variações de gancho e iterações','sv.4p':'Novos ganchos e recortes de um anúncio vencedor, feitos para teste de criativo, para o que já funciona durar mais.',
+    'sv.note':'Vertical 9:16 primeiro, para Meta, TikTok, YouTube Shorts e Reels. Já tem material gravado? Também edito o UGC e o conteúdo dos seus creators.',
     'm.h2':'Como um anúncio é feito',
     'm.p':'Meu processo, de uma referência que já funciona até um arquivo limpo, pronto para testar.',
     'm.1h':'Achar a estrutura','m.1p':'Decupo um anúncio que já está escalando: o que ele quer que o espectador sinta e para onde o leva. A estrutura, não os frames.',
