@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miguel Albert · DTC Video Editor · CV</title>
+<meta name="description" content="CV of Miguel Albert, DTC video editor from Brazil. Short-form ads: UGC, talking-head, 3D and claymation. Available in English and Portuguese.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230c0f1a'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23ff5a36'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Miguel Albert · DTC Video Editor · CV">
+<meta property="og:description" content="Short-form DTC ads, UGC to claymation. CV in English and Portuguese.">
+<meta property="og:image" content="https://portfolio-dtc.vercel.app/media/fragrance.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0c0f1a;--panel:#151a2b;--line:#2a3150;--paper:#f2f4ff;--muted:#9aa3c7;--signal:#ff5a36;
+--display:"Bricolage Grotesque","Arial Narrow",Arial,sans-serif;--body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:4px}
+.bar{position:sticky;top:0;z-index:5;background:rgba(12,15,26,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .in{max-width:860px;margin:0 auto;padding:10px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
+.bar a.back{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--muted);margin-right:auto}
+.bar a.back:hover{color:var(--paper)}
+.seg{display:inline-flex;border:1.5px solid var(--line);border-radius:999px;overflow:hidden}
+.seg button{font:inherit;font-family:var(--mono);font-size:12px;letter-spacing:.08em;padding:7px 14px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--signal);color:#fff}
+.dl{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--paper);border-radius:999px;padding:7px 14px}
+.dl:hover{background:var(--paper);color:var(--ink)}
+.page{max-width:860px;margin:0 auto;padding:40px 20px 72px}
+.doc{display:none}
+body[data-lang="en"] #en,body[data-lang="pt"] #pt{display:block}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.05}
+h1{font-size:clamp(38px,7vw,60px);font-weight:800;letter-spacing:-.02em}
+.role{margin:8px 0 0;font-size:19px;color:var(--signal);font-weight:700}
+.meta{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:4px 20px;font-size:14.5px;color:var(--muted)}
+.meta a{color:var(--paper)}
+h2{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:38px 0 12px;padding-top:18px;border-top:1px solid var(--line)}
+p{margin:0 0 10px}
+.job{margin:0 0 6px}
+.job h3{font-size:20px;font-weight:800}
+.job .when{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;margin:3px 0 10px}
+ul.b{margin:0 0 6px;padding-left:20px}
+ul.b li{margin:0 0 6px}
+.work{display:grid;gap:10px}
+.work .w{display:grid;grid-template-columns:150px 1fr;gap:4px 16px}
+.work .w b{font-weight:700}
+.work .w span.k{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+.skills{display:grid;grid-template-columns:150px 1fr;gap:8px 16px;margin:0}
+.skills dt{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;padding-top:3px}
+.skills dd{margin:0}
+@media (max-width:600px){.work .w,.skills{grid-template-columns:1fr}}
+
+/* print: clean one-page CV on white */
+@media print{
+  @page{size:A4;margin:11mm 13mm}
+  :root{color-scheme:light}
+  body{background:#fff;color:#111;font-size:10.2pt;line-height:1.4}
+  .bar{display:none}
+  .page{padding:0;max-width:none}
+  a{color:#111;text-decoration:none}
+  h1{font-size:26pt}
+  .role{font-size:12pt;color:#c9401f}
+  .meta{font-size:9.2pt;color:#444;margin-top:8px}
+  .meta a{color:#111}
+  h2{color:#555;border-top:1px solid #ccc;margin:13px 0 7px;padding-top:8px;font-size:8.2pt}
+  .job h3{font-size:12pt}
+  .job .when,.work .w span.k,.skills dt{color:#555}
+  .job .when{font-size:8.2pt;margin:2px 0 6px}
+  ul.b li{margin:0 0 3px}
+  p{margin:0 0 6px}
+  .work{gap:5px}
+  .work .w{grid-template-columns:150px 1fr}.work .w span.k{white-space:nowrap}
+  .skills{grid-template-columns:150px 1fr;gap:4px 12px}
+  h2,.job,.w{break-inside:avoid}
+}
+</style>
+</head>
+<body data-lang="en">
+
+<div class="bar">
+  <div class="in">
+    <a class="back" href="./">← Portfolio</a>
+    <div class="seg" role="group" aria-label="Language">
+      <button type="button" data-set="en" aria-pressed="true">EN</button>
+      <button type="button" data-set="pt" aria-pressed="false">PT</button>
+    </div>
+    <a class="dl" id="dl" href="cv-en.pdf" download>Download PDF</a>
+  </div>
+</div>
+
+<main class="page">
+
+<!-- ENGLISH -->
+<article class="doc" id="en" lang="en">
+  <header>
+    <h1>Miguel Albert</h1>
+    <p class="role">DTC Video Editor · Short-form ads</p>
+    <ul class="meta">
+      <li>Remote · Teresina, Brazil (UTC−3)</li>
+      <li><a href="mailto:miguelalbert38@gmail.com">miguelalbert38@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/miguel-albert/">linkedin.com/in/miguel-albert</a></li>
+      <li><a href="https://portfolio-dtc.vercel.app">portfolio-dtc.vercel.app</a></li>
+    </ul>
+  </header>
+
+  <h2>Summary</h2>
+  <p>I edit and build paid ads for DTC brands, from UGC and talking-head to 3D and claymation, with an AI video stack behind them. I started in computer science, moved into video making, then into editing paid ads and VSLs for direct response, and today I put all of that into DTC creative. The first three seconds get their own edit, every line of the script gets a scene that proves it, and I cut for retention. Two years shipping ads in an operation with a high quality bar. Remote, UTC−3, Portuguese native and conversational English.</p>
+
+  <h2>Experience</h2>
+  <div class="job">
+    <h3>Video Editor · Direct-response ad operation</h3>
+    <p class="when">2+ years · Remote · Company confidential</p>
+    <ul class="b">
+      <li>Cut paid ads and VSLs every day, shipping 3+ ads a day in an operation that expects the cleanest cuts on the team.</li>
+      <li>Moved from editing for direct response into DTC creative, bringing hook-first pacing, captions and proof placement into every ad.</li>
+      <li>Produce 2 polished DTC ads a day, from a reference that already works to the final export.</li>
+    </ul>
+  </div>
+
+  <h2>Selected work (concept brands)</h2>
+  <div class="work">
+    <div class="w"><span class="k">UGC · 33s</span><span><b>The night I finally slept</b> (Hush, sleep). A testimonial that opens on the result, walks back through the problem and lands on the product.</span></div>
+    <div class="w"><span class="k">UGC · 37s</span><span><b>Bet me a hundred</b> (Tavola, wine glasses). A challenge format: the bet is the hook, a numbered blind test holds attention, the reveal pays it off.</span></div>
+    <div class="w"><span class="k">Claymation · 47s</span><span><b>The $180 jar vs the $29 serum</b> (Lumivee, skincare). Claymation characters argue the comparison, with keyword captions and fast scene changes.</span></div>
+    <div class="w"><span class="k">3D animated · 67s</span><span><b>Why your teeth stay yellow</b> (Brightmoor, oral care). Story-driven animation, one scene per beat, burned-in captions, product reveal at the turn.</span></div>
+    <div class="w"><span class="k">Podcast-set · 63s</span><span><b>Kestrel</b> (hair care). Several speakers on a podcast set, cut tight to the line, with word-by-word captions.</span></div>
+  </div>
+
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Editing</dt><dd>CapCut, Premiere Pro, hook-first pacing, captions, edit zooms, sound design, retention cuts</dd>
+    <dt>AI video</dt><dd>Higgsfield, Google Flow, Omni Flash, Kling, Seedance, Wan, Magnific, Nano Banana, Muse</dd>
+    <dt>Audio</dt><dd>VoiceStudio (voice cloning and TTS), loudness normalization</dd>
+    <dt>Creative</dt><dd>Ad breakdowns, copy modeling from a reference, casting, start frames, B-roll, hook variants</dd>
+    <dt>Languages</dt><dd>Portuguese (native), English (conversational)</dd>
+  </dl>
+
+  <h2>Training</h2>
+  <p>Direct Response editing program · DTC mentorship · Studied Computer Science</p>
+</article>
+
+<!-- PORTUGUES -->
+<article class="doc" id="pt" lang="pt-BR">
+  <header>
+    <h1>Miguel Albert</h1>
+    <p class="role">Editor de vídeo DTC · Anúncios curtos</p>
+    <ul class="meta">
+      <li>Remoto · Teresina, Brasil (UTC−3)</li>
+      <li><a href="mailto:miguelalbert38@gmail.com">miguelalbert38@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/miguel-albert/">linkedin.com/in/miguel-albert</a></li>
+      <li><a href="https://portfolio-dtc.vercel.app">portfolio-dtc.vercel.app</a></li>
+    </ul>
+  </header>
+
+  <h2>Resumo</h2>
+  <p>Edito e construo anúncios pagos para marcas DTC, de UGC e talking-head a 3D e claymation, com uma stack de vídeo com IA por trás. Comecei em ciência da computação, passei por video maker, depois editei anúncios pagos e VSLs de direct response, e hoje levo tudo isso para criativos DTC. Os três primeiros segundos ganham uma edição própria, cada fala do roteiro ganha uma cena que a prova, e corto pensando em retenção. Dois anos entregando anúncios em uma operação com padrão alto de qualidade. Remoto, UTC−3, português nativo e inglês conversacional.</p>
+
+  <h2>Experiência</h2>
+  <div class="job">
+    <h3>Editor de vídeo · Operação de anúncios de direct response</h3>
+    <p class="when">2+ anos · Remoto · Empresa confidencial</p>
+    <ul class="b">
+      <li>Editei anúncios pagos e VSLs todos os dias, entregando 3+ anúncios por dia em uma operação que espera os cortes mais limpos do time.</li>
+      <li>Migrei da edição de direct response para criativos DTC, levando ritmo focado no gancho, legendas e posicionamento de prova para cada anúncio.</li>
+      <li>Produzo 2 anúncios DTC bem acabados por dia, da referência que já funciona até o export final.</li>
+    </ul>
+  </div>
+
+  <h2>Trabalhos selecionados (marcas conceito)</h2>
+  <div class="work">
+    <div class="w"><span class="k">UGC · 33s</span><span><b>The night I finally slept</b> (Hush, sono). Depoimento que abre no resultado, volta ao problema e chega ao produto.</span></div>
+    <div class="w"><span class="k">UGC · 37s</span><span><b>Bet me a hundred</b> (Tavola, taças de vinho). Formato de desafio: a aposta é o gancho, um teste cego numerado prende a atenção e a revelação fecha.</span></div>
+    <div class="w"><span class="k">Claymation · 47s</span><span><b>The $180 jar vs the $29 serum</b> (Lumivee, skincare). Personagens de massinha discutem a comparação, com legendas de palavra-chave e trocas rápidas de cena.</span></div>
+    <div class="w"><span class="k">Animação 3D · 67s</span><span><b>Why your teeth stay yellow</b> (Brightmoor, saúde bucal). Animação narrativa, uma cena por batida, legendas queimadas e revelação do produto na virada.</span></div>
+    <div class="w"><span class="k">Podcast · 63s</span><span><b>Kestrel</b> (cabelo). Vários falantes em um cenário de podcast, cortados rente à fala, com legendas palavra por palavra.</span></div>
+  </div>
+
+  <h2>Competências</h2>
+  <dl class="skills">
+    <dt>Edição</dt><dd>CapCut, Premiere Pro, ritmo focado no gancho, legendas, zooms de edição, sound design, cortes de retenção</dd>
+    <dt>Vídeo com IA</dt><dd>Higgsfield, Google Flow, Omni Flash, Kling, Seedance, Wan, Magnific, Nano Banana, Muse</dd>
+    <dt>Áudio</dt><dd>VoiceStudio (clonagem de voz e TTS), normalização de loudness</dd>
+    <dt>Criativo</dt><dd>Decupagem de anúncios, copy modelada a partir de referência, casting, start frames, B-roll, variações de gancho</dd>
+    <dt>Idiomas</dt><dd>Português (nativo), inglês (conversacional)</dd>
+  </dl>
+
+  <h2>Formação</h2>
+  <p>Formação em edição de Direct Response · Mentoria de DTC · Estudou Ciência da Computação</p>
+</article>
+
+</main>
+
+<script>
+(function(){
+  var body=document.body, dl=document.getElementById('dl');
+  var btns=[].slice.call(document.querySelectorAll('.seg button'));
+  function setLang(l){
+    if(l!=='en'&&l!=='pt') l='en';
+    body.setAttribute('data-lang',l);
+    document.documentElement.lang = l==='pt' ? 'pt-BR' : 'en';
+    btns.forEach(function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-set')===l)); });
+    dl.href = 'cv-'+l+'.pdf';
+    dl.textContent = l==='pt' ? 'Baixar PDF' : 'Download PDF';
+    document.querySelector('.bar .back').textContent = l==='pt' ? '← Portfólio' : '← Portfolio';
+    try{ history.replaceState(null,'', l==='pt' ? '#pt' : location.pathname + location.search); }catch(e){}
+  }
+  btns.forEach(function(b){ b.addEventListener('click', function(){ setLang(b.getAttribute('data-set')); }); });
+  var h=(location.hash||'').replace('#','');
+  setLang(h==='pt' ? 'pt' : (new URLSearchParams(location.search).get('lang')==='pt' ? 'pt' : 'en'));
+})();
+</script>
+</body>
+</html>
