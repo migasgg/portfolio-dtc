@@ -3,19 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Miguel Albert · DTC Video Editor &amp; AI Video Creator</title>
-<meta name="description" content="DTC video editor and AI video creator from Brazil. UGC, talking-head, 3D and claymation ads built for hook rate and retention. Open to a paid test edit.">
+<title>Miguel Albert · AI Video Creator &amp; DTC Video Editor</title>
+<meta name="description" content="AI video creator and DTC video editor. UGC, talking-head, 3D and claymation ads that sell, built for hook rate and retention.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230c0f1a'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23ff5a36'/%3E%3C/svg%3E">
 <link rel="canonical" href="https://portfolio-dtc.vercel.app/">
 <link rel="alternate" hreflang="en" href="https://portfolio-dtc.vercel.app/">
 <link rel="alternate" hreflang="pt-BR" href="https://portfolio-dtc.vercel.app/?lang=pt">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Miguel Albert · DTC Video Editor & AI Video Creator">
-<meta property="og:description" content="Short-form DTC ads: UGC, talking-head, 3D and claymation. Watch the reel, then send a brief.">
+<meta property="og:title" content="Miguel Albert · AI Video Creator & DTC Video Editor">
+<meta property="og:description" content="AI video ads that sell: UGC, talking-head, 3D and claymation. Watch the reel, then send a brief.">
 <meta property="og:url" content="https://portfolio-dtc.vercel.app/">
 <meta property="og:image" content="https://portfolio-dtc.vercel.app/media/fragrance.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Miguel Albert · DTC Video Editor & AI Video Creator">
+<meta name="twitter:title" content="Miguel Albert · AI Video Creator & DTC Video Editor">
 <meta name="twitter:image" content="https://portfolio-dtc.vercel.app/media/fragrance.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -146,7 +146,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 @media (max-width:560px){.about{grid-template-columns:1fr}}
 
 /* services */
-.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:0;padding:0;list-style:none}
+.svc{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin:0;padding:0;list-style:none}
+.svc li{grid-column:span 2}
+.svc li:nth-child(n+4){grid-column:span 3}
 .svc li{background:var(--panel);border:1.5px solid var(--line);border-radius:22px;padding:24px 22px 26px;display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .2s}
 .svc li:hover{border-color:var(--signal);transform:translateY(-3px)}
 .svc .n{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--signal)}
@@ -154,8 +156,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 .svc p{margin:0;color:#c9cfea;font-size:15px;line-height:1.55;flex:1}
 .svc .bar{display:block;width:34px;height:2px;background:var(--signal);border-radius:2px}
 .svc-note{margin:22px 0 0;color:var(--muted);font-size:15px;max-width:44em}
-@media (max-width:1000px){.svc{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.svc{grid-template-columns:1fr}}
+@media (max-width:1000px){.svc{grid-template-columns:1fr 1fr}.svc li,.svc li:nth-child(n+4){grid-column:span 1}.svc li:last-child{grid-column:1 / -1}}
+@media (max-width:560px){.svc{grid-template-columns:1fr}.svc li:last-child{grid-column:auto}}
 @media (prefers-reduced-motion:reduce){.svc li{transition:none}.svc li:hover{transform:none}}
 /* language switch + CV link in the timeline bar */
 .tl .tools{display:flex;align-items:center;gap:12px}
@@ -206,17 +208,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 <div id="hook" class="hero">
   <div class="wrap">
     <div>
-      <p class="mono" data-i18n="hero.kicker">DTC video editor · AI video creator</p>
-      <h1 data-i18n="hero.h1">The first three seconds decide the ad. <em>I edit them first.</em></h1>
-      <p class="lede" data-i18n="hero.lede">I'm Miguel, a video editor and AI video creator from Brazil. I cut short-form ads for DTC brands: UGC, talking-head, 3D and claymation, and I generate the scenes myself with an AI video stack. Two years of editing ads that have to sell. Open to a paid test edit.</p>
+      <p class="mono" data-i18n="hero.kicker">AI video creator · DTC video editor</p>
+      <h1 data-i18n="hero.h1">The first three seconds decide the ad. <em>Mine stop the scroll.</em></h1>
+      <p class="lede" data-i18n="hero.lede">I'm Miguel, a video editor and AI video creator. I edit and create AI video ads that convert for your brand: UGC, talking-head, 3D, claymation and more. Two years editing ads that sell.</p>
       <div class="cta">
         <a class="btn main" href="#work" data-i18n="hero.cta1">Watch the reel</a>
         <a class="btn" href="https://www.linkedin.com/in/miguel-albert/" target="_blank" rel="noopener" data-i18n="cta.linkedin">Message me on LinkedIn</a>
       </div>
       <ul class="facts">
-        <li data-i18n="fact.1"><b>2+ yrs</b> editing paid ads</li>
-        <li data-i18n="fact.2"><b>Remote</b> · UTC−3</li>
-        <li data-i18n="fact.3"><b>PT</b> native · <b>EN</b> conversational</li>
+        <li data-i18n="fact.1"><b>2+ yrs</b> editing videos that sell</li>
       </ul>
     </div>
     <div class="phone" aria-label="Preview of a claymation ad" data-i18n-aria="hero.phone">
@@ -230,7 +230,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   <div class="wrap">
     <div class="sec-h">
       <h2 data-i18n="work.h2">The body of the ad</h2>
-      <p data-i18n="work.p">Five edits for fictional concept brands. Tap the speaker on any card for sound. Swipe or use the arrows.</p>
+      <p data-i18n="work.p">Five edits for fictional concept brands, modeled on ads that sold. Tap the speaker on any card for sound. Swipe or use the arrows.</p>
     </div>
     <div class="reel-wrap">
       <div class="reel" id="reel" tabindex="0" aria-label="Portfolio videos, scroll sideways" data-i18n-aria="work.reel">
@@ -308,13 +308,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   <div class="wrap">
     <div class="sec-h">
       <h2 data-i18n="sv.h2">What I can make for you</h2>
-      <p data-i18n="sv.p">Short-form ads for DTC brands, built to be tested.</p>
+      <p data-i18n="sv.p">Ads for your brand.</p>
     </div>
     <ul class="svc">
       <li><span class="n">01</span><h3 data-i18n="sv.1h">AI UGC and testimonial ads</h3><p data-i18n="sv.1p">Creator-style ads with a cast avatar and every scene generated, cut to feel like real UGC. No shoot, no creator to wait on.</p><span class="bar"></span></li>
       <li><span class="n">02</span><h3 data-i18n="sv.2h">Animated and claymation ads</h3><p data-i18n="sv.2p">3D, Pixar-style and claymation ads that explain the product through a story and hold attention until the reveal.</p><span class="bar"></span></li>
       <li><span class="n">03</span><h3 data-i18n="sv.3h">Talking-head and podcast-set ads</h3><p data-i18n="sv.3p">Founder, expert or podcast-style ads cut tight to the line, with word-by-word captions and proof on screen.</p><span class="bar"></span></li>
       <li><span class="n">04</span><h3 data-i18n="sv.4h">Hook variants and iterations</h3><p data-i18n="sv.4p">New hooks and re-cuts of a winning ad, built for creative testing, so what already works keeps working longer.</p><span class="bar"></span></li>
+      <li><span class="n">05</span><h3 data-i18n="sv.5h">Any winning ad, rebuilt for your brand</h3><p data-i18n="sv.5p">Send me an ad that is selling in your market. I model its structure and bring it to your product, with your offer and your look.</p><span class="bar"></span></li>
     </ul>
     <p class="svc-note" data-i18n="sv.note">Vertical 9:16 first, for Meta, TikTok, YouTube Shorts and Reels. Already have footage? I edit your UGC and creator content too.</p>
   </div>
@@ -328,7 +329,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     </div>
     <div class="steps six">
       <div class="step"><span class="mono">01</span><h3 data-i18n="m.1h">Find the structure</h3><p data-i18n="m.1p">I break down an ad that is already scaling: what it wants the viewer to feel and where it takes them. The structure, not the frames.</p></div>
-      <div class="step"><span class="mono">02</span><h3 data-i18n="m.2h">Model the copy</h3><p data-i18n="m.2p">The script is rewritten for the new product from that structure. I don't translate line by line.</p></div>
+      <div class="step"><span class="mono">02</span><h3 data-i18n="m.2h">Bring the copy to life</h3><p data-i18n="m.2p">You send the script and the references. I break the copy down line by line and plan the scene that sells each one.</p></div>
       <div class="step"><span class="mono">03</span><h3 data-i18n="m.3h">Approve face and product</h3><p data-i18n="m.3p">The character and the product get approved before any scene is generated, so they stay consistent across every cut.</p></div>
       <div class="step"><span class="mono">04</span><h3 data-i18n="m.4h">Prove every line</h3><p data-i18n="m.4p">Each line of the script gets a scene that shows it, and the expression matches the line. Everything is moving video.</p></div>
       <div class="step"><span class="mono">05</span><h3 data-i18n="m.5h">Cut for retention</h3><p data-i18n="m.5p">Fast cuts, edit zooms, captions and sound effects, with the hook cut first and tested on its own.</p></div>
@@ -348,14 +349,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   <div class="wrap">
     <div class="sec-h">
       <h2 data-i18n="s.h2">What I work with</h2>
-      <p data-i18n="s.p">The formats I edit, the tools behind every ad, and the categories in the reel.</p>
+      <p data-i18n="s.p">The formats I edit and the tools behind every ad.</p>
     </div>
     <div class="cols">
       <div class="col">
         <h3 data-i18n="s.formats">Formats</h3>
-        <ul class="tags" data-i18n="s.formats.list"><li>UGC</li><li>AI UGC</li><li>3D animated ads</li><li>Claymation ads</li><li>Talking-head</li><li>Podcast-set ads</li><li>Testimonial ads</li><li>Short-form ads</li></ul>
-        <h3 class="mt" data-i18n="s.cats">Categories</h3>
-        <ul class="tags" data-i18n="s.cats.list"><li>Skincare</li><li>Hair care</li><li>Oral care</li><li>Sleep</li><li>Drinkware</li></ul>
+        <ul class="tags" data-i18n="s.formats.list"><li>UGC</li><li>AI UGC</li><li>3D animated ads</li><li>Claymation ads</li><li>Talking-head</li><li>Podcast-set ads</li><li>Testimonial ads</li><li>Short-form ads</li><li>And more</li></ul>
       </div>
       <div class="col">
         <h3 data-i18n="s.ai">AI toolkit</h3>
@@ -364,7 +363,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
         <p class="grp" data-i18n="s.g.image">Image and upscale</p>
         <ul class="tags"><li>Nano Banana</li><li>Magnific</li></ul>
         <p class="grp" data-i18n="s.g.voice">Voice</p>
-        <ul class="tags"><li>VoiceStudio</li></ul>
+        <ul class="tags"><li>ElevenLabs</li><li>MiniMax</li><li>VoiceStudio</li></ul>
       </div>
       <div class="col">
         <h3 data-i18n="s.edit">Editing</h3>
@@ -383,8 +382,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
       <img class="me gone" id="me" src="media/miguel.jpg" alt="Miguel Albert">
       <div>
         <div class="sec-h" style="margin-bottom:20px"><h2 data-i18n="a.h2">Who is cutting your ad</h2></div>
-        <p data-i18n="a.1">I'm Miguel Albert, known as Migas, based in Teresina, Brazil. I started in computer science, became a video maker, then edited paid ads and VSLs for direct response, where every video has to earn its place by selling.</p>
-        <p data-i18n="a.2">Today my focus is DTC creative. I bring that direct-response discipline into every ad and produce the scenes myself with AI: UGC, animated and talking-head formats. I work remote on UTC−3, in Portuguese and conversational English, and I take feedback fast.</p>
+        <p data-i18n="a.1">I'm Miguel Albert, but you can call me Albert. I'm from Teresina, Piauí, Brazil. I started in computer science, became a video maker, then edited direct-response ads and VSLs that sold millions of dollars.</p>
+        <p data-i18n="a.2">Today my focus is AI video ads that sell for brands. I bring that direct-response discipline into every ad and produce the scenes with AI: UGC, animation and talking-head. I work remote, in Portuguese and conversational English, and I take feedback fast.</p>
       </div>
     </div>
   </div>
@@ -393,11 +392,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 <section id="close">
   <div class="wrap close">
     <h2 data-i18n="cl.h2">Got a brief? <em>Send it.</em></h2>
-    <p data-i18n="cl.p">I'm looking for a full-time DTC video editor role. Send a brief and I'll cut a test edit; paid tests are welcome. LinkedIn or email is the fastest way to reach me, and WhatsApp works too.</p>
+    <p data-i18n="cl.p">Send me a video and I'll make a test edit. Every way to reach me is below.</p>
     <h3 class="wwh" data-i18n="w.h">How we'd work</h3>
     <ol class="ww">
       <li><span class="mono">01</span><span data-i18n="w.1">You send the brief</span></li>
-      <li><span class="mono">02</span><span data-i18n="w.2">I break it down and write the script for your OK</span></li>
+      <li><span class="mono">02</span><span data-i18n="w.2">I break down the script and plan every scene</span></li>
       <li><span class="mono">03</span><span data-i18n="w.3">I produce and cut the first version</span></li>
       <li><span class="mono">04</span><span data-i18n="w.4">You review, I revise</span></li>
       <li><span class="mono">05</span><span data-i18n="w.5">You get the final MP4 and the editable project</span></li>
@@ -414,7 +413,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 
 <footer>
   <div class="wrap">
-    <span class="mono" data-i18n="f.1">Miguel Albert · DTC video editor &amp; AI video creator · miguelalbert38@gmail.com</span>
+    <span class="mono" data-i18n="f.1">Miguel Albert · AI video creator &amp; DTC video editor · miguelalbert38@gmail.com</span>
     <span class="mono" data-i18n="f.2"><a href="cv.html">CV</a> · Teresina, Brazil · UTC−3</span>
   </div>
 </footer>
@@ -426,14 +425,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   /* ---------- language: EN is the page default, PT is optional ---------- */
   var PT = {
     'nav.aria':'Seções','nav.hook':'Gancho','nav.work':'Trabalhos','nav.method':'Método','nav.stack':'Stack','nav.close':'Contato',
-    'hero.kicker':'Editor de vídeo DTC · Criador de vídeo com IA',
-    'hero.h1':'Os três primeiros segundos decidem o anúncio. <em>Eu edito eles primeiro.</em>',
-    'hero.lede':'Sou o Miguel, editor de vídeo e criador de vídeo com IA, do Brasil. Edito anúncios curtos para marcas DTC: UGC, talking-head, 3D e claymation, e gero as cenas eu mesmo com uma stack de vídeo com IA. Dois anos editando anúncios que precisam vender. Aberto a uma edição de teste paga.',
+    'hero.kicker':'Criador de vídeo com IA · Editor de vídeo DTC',
+    'hero.h1':'Os três primeiros segundos decidem o anúncio. <em>Os meus param o scroll.</em>',
+    'hero.lede':'Sou o Miguel, editor de vídeo e criador de vídeo com IA. Edito e crio anúncios em vídeo com IA que convertem para a sua marca: UGC, talking-head, 3D, claymation e mais. Dois anos editando anúncios que vendem.',
     'hero.cta1':'Ver os vídeos','cta.linkedin':'Fale comigo no LinkedIn','cta.cv':'Baixar CV (PDF)',
-    'fact.1':'<b>2+ anos</b> editando anúncios pagos','fact.2':'<b>Remoto</b> · UTC−3','fact.3':'<b>PT</b> nativo · <b>EN</b> conversacional',
+    'fact.1':'<b>2+ anos</b> editando vídeos que vendem',
     'hero.phone':'Prévia de um anúncio em claymation',
     'work.h2':'O corpo do anúncio',
-    'work.p':'Cinco edições para marcas conceito fictícias. Toque no alto-falante de qualquer card para ouvir. Arraste ou use as setas.',
+    'work.p':'Cinco edições para marcas conceito fictícias, modeladas em anúncios que venderam. Toque no alto-falante de qualquer card para ouvir. Arraste ou use as setas.',
     'work.reel':'Vídeos do portfólio, role para o lado','work.prev':'Vídeo anterior','work.next':'Próximo vídeo','snd':'Ligar ou desligar o som',
     'lbl.hook':'Gancho','lbl.made':'Feito com',
     'pill.3d':'Anúncio em 3D','pill.clay':'Anúncio em claymation',
@@ -454,16 +453,17 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     'kes.p':'Vários falantes em um cenário de podcast, cortados rente à fala. Legendas palavra por palavra e o produto na mão no momento certo.',
     'kes.hook':'Uma troca no podcast, cortada rente à fala.',
     'kes.made':'Muse, referência de voz, CapCut',
-    'sv.h2':'O que eu posso criar para você','sv.p':'Anúncios curtos para marcas DTC, feitos para serem testados.',
+    'sv.h2':'O que eu posso criar para você','sv.p':'Anúncios para a sua marca.',
     'sv.1h':'Anúncios UGC e de depoimento com IA','sv.1p':'Anúncios no estilo creator, com avatar escolhido e cada cena gerada, editados para parecer UGC real. Sem gravação, sem esperar creator.',
     'sv.2h':'Anúncios animados e em claymation','sv.2p':'Anúncios em 3D, estilo Pixar e claymation que explicam o produto com uma história e prendem a atenção até a revelação.',
     'sv.3h':'Talking-head e cenário de podcast','sv.3p':'Anúncios com fundador, especialista ou em formato de podcast, cortados rente à fala, com legendas palavra por palavra e prova na tela.',
     'sv.4h':'Variações de gancho e iterações','sv.4p':'Novos ganchos e recortes de um anúncio vencedor, feitos para teste de criativo, para o que já funciona durar mais.',
+    'sv.5h':'Qualquer anúncio vencedor, refeito para a sua marca','sv.5p':'Me mande um anúncio que está vendendo no seu mercado. Eu modelo a estrutura e trago para o seu produto, com a sua oferta e a sua cara.',
     'sv.note':'Vertical 9:16 primeiro, para Meta, TikTok, YouTube Shorts e Reels. Já tem material gravado? Também edito o UGC e o conteúdo dos seus creators.',
     'm.h2':'Como um anúncio é feito',
     'm.p':'Meu processo, de uma referência que já funciona até um arquivo limpo, pronto para testar.',
     'm.1h':'Achar a estrutura','m.1p':'Decupo um anúncio que já está escalando: o que ele quer que o espectador sinta e para onde o leva. A estrutura, não os frames.',
-    'm.2h':'Modelar a copy','m.2p':'O roteiro é reescrito para o novo produto a partir dessa estrutura. Não traduzo linha por linha.',
+    'm.2h':'Dar vida à copy','m.2p':'Você manda o roteiro e as referências. Eu destrincho a copy fala por fala e planejo a cena que vende cada uma.',
     'm.3h':'Aprovar rosto e produto','m.3p':'O personagem e o produto são aprovados antes de gerar qualquer cena, para ficarem iguais em todos os cortes.',
     'm.4h':'Provar cada fala','m.4p':'Cada fala do roteiro ganha uma cena que a mostra, e a expressão combina com a fala. Tudo é vídeo em movimento.',
     'm.5h':'Cortar para retenção','m.5p':'Cortes rápidos, zooms de edição, legendas e efeitos sonoros, com o gancho editado primeiro e testado sozinho.',
@@ -474,27 +474,25 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     'c.3h':'Prova','c.3p':'Demonstrações, comparações e prova social ficam onde a dúvida do espectador aparece, não no final.',
     'c.4h':'Fechamento','c.4p':'Uma oferta clara e um CTA, colocados quando o espectador está pronto para agir.',
     's.h2':'Com o que eu trabalho',
-    's.p':'Os formatos que edito, as ferramentas por trás de cada anúncio e as categorias dos vídeos.',
+    's.p':'Os formatos que edito e as ferramentas por trás de cada anúncio.',
     's.formats':'Formatos',
-    's.formats.list':'<li>UGC</li><li>UGC com IA</li><li>Anúncios em 3D</li><li>Anúncios em claymation</li><li>Talking-head</li><li>Anúncios em cenário de podcast</li><li>Anúncios de depoimento</li><li>Anúncios curtos</li>',
-    's.cats':'Categorias',
-    's.cats.list':'<li>Skincare</li><li>Cabelo</li><li>Saúde bucal</li><li>Sono</li><li>Taças e copos</li>',
+    's.formats.list':'<li>UGC</li><li>UGC com IA</li><li>Anúncios em 3D</li><li>Anúncios em claymation</li><li>Talking-head</li><li>Anúncios em cenário de podcast</li><li>Anúncios de depoimento</li><li>Anúncios curtos</li><li>E muito mais</li>',
     's.ai':'Ferramentas de IA','s.g.video':'Vídeo','s.g.image':'Imagem e upscale','s.g.voice':'Voz',
     's.edit':'Edição','s.g.soft':'Programas','s.g.craft':'Técnica',
     's.craft.list':'<li>Ritmo focado no gancho</li><li>Legendas</li><li>Zooms de edição</li><li>Sound design</li><li>Cortes de retenção</li><li>Variações de gancho</li>',
     'a.h2':'Quem está editando o seu anúncio',
-    'a.1':'Sou o Miguel Albert, o Migas, de Teresina, Brasil. Comecei em ciência da computação, virei video maker e depois editei anúncios pagos e VSLs de direct response, onde cada vídeo precisa se pagar vendendo.',
-    'a.2':'Hoje meu foco é criativo DTC. Levo essa disciplina de direct response para cada anúncio e produzo as cenas eu mesmo com IA: UGC, animação e talking-head. Trabalho remoto em UTC−3, em português e inglês conversacional, e respondo rápido a feedback.',
+    'a.1':'Sou o Miguel Albert, mas pode me chamar de Albert. Sou de Teresina, Piauí, Brasil. Comecei em ciência da computação, virei video maker e depois editei anúncios e VSLs de direct response que venderam milhões de dólares.',
+    'a.2':'Hoje meu foco é criar vídeos com IA que vendem para marcas. Levo essa disciplina de direct response para cada anúncio e produzo as cenas com IA: UGC, animação e talking-head. Trabalho remoto, em português e inglês conversacional, e respondo rápido a feedback.',
     'cl.h2':'Tem um briefing? <em>Manda.</em>',
-    'cl.p':'Busco uma vaga full-time de editor de vídeo DTC. Mande um briefing e eu faço uma edição de teste; testes pagos são bem-vindos. LinkedIn ou e-mail é o jeito mais rápido de falar comigo, e WhatsApp também funciona.',
+    'cl.p':'Mande um vídeo e eu faço uma edição de teste. Aqui embaixo estão todos os jeitos de falar comigo.',
     'w.h':'Como a gente trabalharia',
-    'w.1':'Você manda o briefing','w.2':'Eu decupo e escrevo o roteiro para a sua aprovação','w.3':'Eu produzo e edito a primeira versão','w.4':'Você revisa, eu ajusto','w.5':'Você recebe o MP4 final e o projeto editável',
-    'f.1':'Miguel Albert · Editor de vídeo DTC e criador de vídeo com IA · miguelalbert38@gmail.com',
+    'w.1':'Você manda o briefing','w.2':'Eu decupo o roteiro e planejo cada cena','w.3':'Eu produzo e edito a primeira versão','w.4':'Você revisa, eu ajusto','w.5':'Você recebe o MP4 final e o projeto editável',
+    'f.1':'Miguel Albert · Criador de vídeo com IA e editor de vídeo DTC · miguelalbert38@gmail.com',
     'f.2':'<a href="cv.html">CV</a> · Teresina, Brasil · UTC−3'
   };
   var META = {
-    en:{title:'Miguel Albert · DTC Video Editor & AI Video Creator', desc:'DTC video editor and AI video creator from Brazil. UGC, talking-head, 3D and claymation ads built for hook rate and retention. Open to a paid test edit.'},
-    pt:{title:'Miguel Albert · Editor de vídeo DTC e criador de vídeo com IA', desc:'Editor de vídeo DTC e criador de vídeo com IA, do Brasil. Anúncios UGC, talking-head, 3D e claymation feitos para gancho e retenção.'}
+    en:{title:'Miguel Albert · AI Video Creator & DTC Video Editor', desc:'AI video creator and DTC video editor. UGC, talking-head, 3D and claymation ads that sell, built for hook rate and retention.'},
+    pt:{title:'Miguel Albert · Criador de vídeo com IA e editor de vídeo DTC', desc:'Criador de vídeo com IA e editor de vídeo DTC. Anúncios UGC, talking-head, 3D e claymation que vendem, feitos para gancho e retenção.'}
   };
   var tNodes = [].slice.call(document.querySelectorAll('[data-i18n]'));
   var aNodes = [].slice.call(document.querySelectorAll('[data-i18n-aria]'));
