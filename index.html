@@ -96,6 +96,13 @@ section{padding:84px 0;border-top:1px solid var(--line)}
 .pill{position:absolute;left:12px;top:12px;padding:4px 10px;border-radius:999px;background:var(--signal);color:#fff;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
 .snd{position:absolute;right:12px;bottom:12px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(12,15,26,.82);color:var(--paper);cursor:pointer;display:grid;place-items:center}
 .snd svg{width:20px;height:20px}
+.full{position:absolute;left:12px;bottom:12px;height:44px;padding:0 14px;border-radius:999px;border:0;background:rgba(12,15,26,.82);color:var(--paper);cursor:pointer;display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:12px;letter-spacing:.04em}
+.full svg{width:14px;height:14px}
+#player{padding:0;border:0;background:transparent;max-width:none;max-height:none;width:100vw;height:100dvh;margin:0}
+#player::backdrop{background:rgba(6,8,15,.92)}
+#player .box{position:relative;height:100%;display:grid;place-items:center;padding:60px 16px 16px}
+#player video{height:min(84dvh,calc((100vw - 32px)*16/9));aspect-ratio:9/16;max-width:100%;border-radius:18px;background:#000;display:block}
+#player .x{position:absolute;top:10px;right:12px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);background:var(--panel);color:var(--paper);font-size:22px;line-height:1;cursor:pointer}
 .snd .on{display:none}
 .snd[aria-pressed="true"] .on{display:block}
 .snd[aria-pressed="true"] .off{display:none}
@@ -238,14 +245,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   <div class="wrap">
     <div class="sec-h">
       <h2 data-i18n="work.h2">The body of the ad</h2>
-      <p data-i18n="work.p">Five edits for fictional concept brands, modeled on ads that sold. Tap the speaker on any card for sound. Swipe or use the arrows.</p>
+      <p data-i18n="work.p">Five edits for fictional concept brands, modeled on ads that sold. Each card plays a short cut. Tap “Full ad” to watch the whole thing, or the speaker for sound.</p>
     </div>
     <div class="reel-wrap">
       <div class="reel" id="reel" tabindex="0" aria-label="Portfolio videos, scroll sideways" data-i18n-aria="work.reel">
 
         <article class="card">
           <div class="vid">
-            <video data-reel src="media/teeth.mp4" poster="media/teeth.jpg" muted loop playsinline preload="metadata"></video>
+            <video data-reel src="media/teeth-cut.mp4" data-full="media/teeth.mp4" poster="media/teeth.jpg" muted loop playsinline preload="metadata"></video>
+            <button class="full" type="button"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span data-i18n="full">Full ad</span>&nbsp;· 1:07</button>
             <span class="pill" data-i18n="pill.3d">3D animated ad</span>
             <button class="snd" aria-label="Toggle sound" aria-pressed="false"><svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m16 9 5 6m0-6-5 6"/></svg><svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></button>
           </div>
@@ -257,7 +265,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 
         <article class="card">
           <div class="vid">
-            <video data-reel src="media/fragrance.mp4" poster="media/fragrance.jpg" muted loop playsinline preload="metadata"></video>
+            <video data-reel src="media/fragrance-cut.mp4" data-full="media/fragrance.mp4" poster="media/fragrance.jpg" muted loop playsinline preload="metadata"></video>
+            <button class="full" type="button"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span data-i18n="full">Full ad</span>&nbsp;· 0:47</button>
             <span class="pill" data-i18n="pill.clay">Claymation ad</span>
             <button class="snd" aria-label="Toggle sound" aria-pressed="false"><svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m16 9 5 6m0-6-5 6"/></svg><svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></button>
           </div>
@@ -269,7 +278,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 
         <article class="card">
           <div class="vid">
-            <video data-reel src="media/sleeping.mp4" poster="media/sleeping.jpg" muted loop playsinline preload="metadata"></video>
+            <video data-reel src="media/sleeping-cut.mp4" data-full="media/sleeping.mp4" poster="media/sleeping.jpg" muted loop playsinline preload="metadata"></video>
+            <button class="full" type="button"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span data-i18n="full">Full ad</span>&nbsp;· 0:33</button>
             <span class="pill">UGC</span>
             <button class="snd" aria-label="Toggle sound" aria-pressed="false"><svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m16 9 5 6m0-6-5 6"/></svg><svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></button>
           </div>
@@ -281,7 +291,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 
         <article class="card">
           <div class="vid">
-            <video data-reel src="media/kestrel.mp4" poster="media/kestrel.jpg" muted loop playsinline preload="metadata"></video>
+            <video data-reel src="media/kestrel-cut.mp4" data-full="media/kestrel.mp4" poster="media/kestrel.jpg" muted loop playsinline preload="metadata"></video>
+            <button class="full" type="button"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span data-i18n="full">Full ad</span>&nbsp;· 1:03</button>
             <span class="pill">Talking-head</span>
             <button class="snd" aria-label="Toggle sound" aria-pressed="false"><svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m16 9 5 6m0-6-5 6"/></svg><svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></button>
           </div>
@@ -293,7 +304,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 
         <article class="card">
           <div class="vid">
-            <video data-reel src="media/wine.mp4" poster="media/wine.jpg" muted loop playsinline preload="metadata"></video>
+            <video data-reel src="media/wine-cut.mp4" data-full="media/wine.mp4" poster="media/wine.jpg" muted loop playsinline preload="metadata"></video>
+            <button class="full" type="button"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span data-i18n="full">Full ad</span>&nbsp;· 0:37</button>
             <span class="pill">UGC</span>
             <button class="snd" aria-label="Toggle sound" aria-pressed="false"><svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m16 9 5 6m0-6-5 6"/></svg><svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></button>
           </div>
@@ -386,7 +398,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
         <p class="grp" data-i18n="s.g.soft">Software</p>
         <ul class="tags"><li>Premiere Pro</li><li>CapCut</li></ul>
         <p class="grp" data-i18n="s.g.craft">Craft</p>
-        <ul class="tags" data-i18n="s.craft.list"><li>Retention-first pacing</li><li>Captions that hold attention</li><li>Sound design</li><li>Retention cuts</li><li>Hook variants</li><li>Creative testing</li></li><li>One-word captions</li><li>Edit zooms</li><li>Sound design</li><li>Retention cuts</li><li>Hook variants</li><li>Creative testing</li></ul>
+        <ul class="tags" data-i18n="s.craft.list"><li>Retention-first pacing</li><li>Captions that hold attention</li><li>Sound design</li><li>Retention cuts</li><li>Hook variants</li><li>Creative testing</li></ul>
       </div>
     </div>
   </div>
@@ -398,9 +410,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
       <img class="me gone" id="me" src="media/miguel.jpg" alt="Miguel Albert">
       <div>
         <div class="sec-h" style="margin-bottom:20px"><h2 data-i18n="a.h2">Who is cutting your ad</h2></div>
-        <p data-i18n="a.1">I'm Miguel Albert, but you can call me Albert. I'm from Teresina, Brazil. I've been editing video for 3 years: first at agencies, cutting conversion videos for organic and paid traffic, plus YouTube, vlogs, UGC and even a short film. Then direct response, where I've edited ads and VSLs that sold multiple 7 figures, including one of the most-cloned ads in its market this year.</p>
-        <p data-i18n="a.2">I've always run projects of my own too: a faceless YouTube channel, TikTok and TikTok Shop, all of which made money. So I know what it takes for a video to sell, from both sides.</p>
-        <p data-i18n="a.3">Today I bring that into DTC with AI. You send me the brief, I bring it to life and make it sell more. On time, every time.</p>
+        <p data-i18n="a.1">I edit and create AI video ads for DTC brands, built to hold attention until the offer and protect your ROAS. Your strategist sends the brief. I bring it to life: a scene that proves every line, and pacing, captions and sound picked to keep people watching. Only the editing the ad needs.</p>
+        <p data-i18n="a.2">In direct response I've edited ads and VSLs that sold multiple 7 figures, including one of the most-cloned ads in its market this year. I read hook rate, hold rate, CTR, CPA and ROAS, so every next edit has a reason. On time, every time.</p>
+        <p data-i18n="a.3">I'm Miguel Albert, but you can call me Albert. I'm from Teresina, Brazil. Before direct response I edited at video agencies, and I've run channels of my own that made money too.</p>
       </div>
     </div>
   </div>
@@ -428,6 +440,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 </section>
 </main>
 
+<dialog id="player" aria-label="Full ad" data-i18n-aria="full">
+  <div class="box">
+    <button class="x" type="button" aria-label="Close" data-i18n-aria="close">&times;</button>
+    <video controls playsinline preload="none"></video>
+  </div>
+</dialog>
+
 <footer>
   <div class="wrap">
     <span class="mono" data-i18n="f.1">Miguel Albert · AI video creator &amp; DTC video editor · miguelalbert38@gmail.com</span>
@@ -451,7 +470,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     'fact.3':'No prazo, sempre',
     'hero.phone':'Prévia de um anúncio em claymation',
     'work.h2':'O corpo do anúncio',
-    'work.p':'Cinco edições para marcas conceito fictícias, modeladas em anúncios que venderam. Toque no alto-falante de qualquer card para ouvir. Arraste ou use as setas.',
+    'work.p':'Cinco edições para marcas conceito fictícias, modeladas em anúncios que venderam. Cada card mostra um corte curto. Toque em “Ver inteiro” para assistir ao anúncio todo, ou no alto-falante para ouvir.','full':'Ver inteiro','close':'Fechar',
     'work.reel':'Vídeos do portfólio, role para o lado','work.prev':'Vídeo anterior','work.next':'Próximo vídeo','snd':'Ligar ou desligar o som',
     'lbl.hook':'Gancho','lbl.made':'Feito com','lbl.did':'O que eu fiz',
     'did':'Roteiro modelado num anúncio que vendeu, prompts e direção de cena, revisão de cada clipe, edição, legendas e som. A IA gerou as imagens e as vozes.',
@@ -507,8 +526,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     's.edit':'Edição','s.g.soft':'Programas','s.g.craft':'Técnica',
     's.craft.list':'<li>Ritmo pensado para retenção</li><li>Legendas que prendem a atenção</li><li>Sound design</li><li>Cortes de retenção</li><li>Variações de hook</li><li>Teste de criativo</li>',
     'a.h2':'Quem está editando o seu anúncio',
-    'a.1':'Sou o Miguel Albert, mas pode me chamar de Albert. Sou de Teresina, Brasil. Edito vídeo há 3 anos: primeiro em agências, editando vídeos de conversão para tráfego orgânico e pago, além de YouTube, vlogs, UGC e até um curta-metragem. Depois veio a resposta direta, onde editei anúncios e VSLs que venderam múltiplos 7 dígitos, incluindo um dos anúncios mais clonados do mercado dele neste ano.',
-    'a.2':'Também sempre tive projetos meus: um canal dark no YouTube, TikTok e TikTok Shop, e todos deram dinheiro. Então eu sei o que um vídeo precisa para vender, dos dois lados.','a.3':'Hoje levo isso para o DTC com IA. Você me manda o briefing, eu dou vida a ele e faço vender mais. No prazo, sempre.',
+    'a.1':'Eu edito e crio anúncios em vídeo com IA para marcas DTC, feitos para prender a atenção até a oferta e proteger o seu ROAS. O seu estrategista manda o briefing. Eu dou vida a ele: uma cena que prova cada fala, e ritmo, legendas e som escolhidos para a pessoa continuar assistindo. Só a edição que o anúncio precisa.',
+    'a.2':'Em resposta direta, editei anúncios e VSLs que venderam múltiplos 7 dígitos, incluindo um dos anúncios mais clonados do mercado dele neste ano. Eu leio hook rate, hold rate, CTR, CPA e ROAS, então cada próxima edição tem um motivo. No prazo, sempre.','a.3':'Sou o Miguel Albert, mas pode me chamar de Albert. Sou de Teresina, Brasil. Antes da resposta direta, editei em agências de vídeo, e também tive canais próprios que deram dinheiro.',
     'cl.h2':'Tem um briefing? <em>Manda.</em>',
     'cl.p':'Mande um vídeo e eu faço uma edição de teste. Aqui embaixo estão todos os jeitos de falar comigo.',
     'w.h':'Como a gente trabalharia',
@@ -590,6 +609,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(e){
         var v = e.target;
+        if (document.getElementById('player').open) { v.pause(); return; }
         if (e.isIntersecting && e.intersectionRatio > 0.6) { var p = v.play(); if (p && p.catch) p.catch(function(){}); }
         else { v.pause(); }
       });
@@ -606,6 +626,26 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
       if (on) { v.muted = false; b.setAttribute('aria-pressed','true'); }
       try { var p = v.play(); if (p && p.catch) p.catch(function(){}); } catch(e){}
     });
+  });
+
+  /* full ad player */
+  var dlg = document.getElementById('player'), pv = dlg.querySelector('video'), lastVid = null;
+  [].slice.call(document.querySelectorAll('.full')).forEach(function(b){
+    var v = b.parentNode.querySelector('video');
+    b.addEventListener('click', function(){
+      vids.forEach(function(o){ o.pause(); });
+      lastVid = v;
+      pv.src = v.getAttribute('data-full'); pv.poster = v.poster; pv.muted = false;
+      if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open','');
+      var p = pv.play(); if (p && p.catch) p.catch(function(){});
+    });
+  });
+  function closePlayer(){ pv.pause(); pv.removeAttribute('src'); pv.load(); if (dlg.open) dlg.close(); }
+  dlg.querySelector('.x').addEventListener('click', closePlayer);
+  dlg.addEventListener('click', function(e){ if (e.target === dlg || e.target.classList.contains('box')) closePlayer(); });
+  dlg.addEventListener('close', function(){
+    pv.pause();
+    if (lastVid && !reduce) { var p = lastVid.play(); if (p && p.catch) p.catch(function(){}); }
   });
 
   /* carousel buttons and arrow keys */
