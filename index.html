@@ -178,6 +178,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 .ww{list-style:none;padding:0;margin:0 0 32px;display:grid;grid-template-columns:repeat(5,1fr);border:1.5px solid var(--line);border-radius:18px;overflow:hidden}
 .ww li{padding:16px 16px 18px;background:var(--panel);border-left:1px solid var(--line);display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.4}
 .ww li:first-child{border-left:0}
+/* metric chips + numbers block */
+.steps .step:has(.kpi){display:flex;flex-direction:column}
+.steps .step:has(.kpi) p{margin-bottom:16px}
+.step .kpi{display:inline-block;margin-top:auto;align-self:flex-start;padding:4px 10px;border:1px solid var(--line);border-radius:999px;color:var(--signal);font-size:11px}
+.steps.num .step h3{font-size:24px}
 @media (max-width:900px){.ww{grid-template-columns:1fr}.ww li{border-left:0;border-top:1px solid var(--line);flex-direction:row;align-items:baseline;gap:14px}.ww li:first-child{border-top:0}}
 </style>
 </head>
@@ -314,7 +319,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
       <li><span class="n">01</span><h3 data-i18n="sv.1h">AI UGC and testimonial ads</h3><p data-i18n="sv.1p">Creator-style ads with a cast avatar and every scene generated, cut to feel like real UGC. No shoot, no creator to wait on.</p><span class="bar"></span></li>
       <li><span class="n">02</span><h3 data-i18n="sv.2h">Animated and claymation ads</h3><p data-i18n="sv.2p">3D, Pixar-style and claymation ads that explain the product through a story and hold attention until the reveal.</p><span class="bar"></span></li>
       <li><span class="n">03</span><h3 data-i18n="sv.3h">Talking-head and podcast-set ads</h3><p data-i18n="sv.3p">Founder, expert or podcast-style ads cut tight to the line, with word-by-word captions and proof on screen.</p><span class="bar"></span></li>
-      <li><span class="n">04</span><h3 data-i18n="sv.4h">Hook variants and iterations</h3><p data-i18n="sv.4p">New hooks and re-cuts of a winning ad, built for creative testing, so what already works keeps working longer.</p><span class="bar"></span></li>
+      <li><span class="n">04</span><h3 data-i18n="sv.4h">Hook variants and iterations</h3><p data-i18n="sv.4p">New hooks and re-cuts of a winning ad: two modeled on proven openings, one bolder idea. When the body works, you test the hook, not the whole ad.</p><span class="bar"></span></li>
       <li><span class="n">05</span><h3 data-i18n="sv.5h">Any winning ad, rebuilt for your brand</h3><p data-i18n="sv.5p">Send me an ad that is selling in your market. I model its structure and bring it to your product, with your offer and your look.</p><span class="bar"></span></li>
     </ul>
     <p class="svc-note" data-i18n="sv.note">Vertical 9:16 first, for Meta, TikTok, YouTube Shorts and Reels. Already have footage? I edit your UGC and creator content too.</p>
@@ -332,15 +337,22 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
       <div class="step"><span class="mono">02</span><h3 data-i18n="m.2h">Bring the copy to life</h3><p data-i18n="m.2p">You send the script and the references. I break the copy down line by line and plan the scene that sells each one.</p></div>
       <div class="step"><span class="mono">03</span><h3 data-i18n="m.3h">Approve face and product</h3><p data-i18n="m.3p">The character and the product get approved before any scene is generated, so they stay consistent across every cut.</p></div>
       <div class="step"><span class="mono">04</span><h3 data-i18n="m.4h">Prove every line</h3><p data-i18n="m.4p">Each line of the script gets a scene that shows it, and the expression matches the line. Everything is moving video.</p></div>
-      <div class="step"><span class="mono">05</span><h3 data-i18n="m.5h">Cut for retention</h3><p data-i18n="m.5p">Fast cuts, edit zooms, captions and sound effects, with the hook cut first and tested on its own.</p></div>
+      <div class="step"><span class="mono">05</span><h3 data-i18n="m.5h">Cut for retention</h3><p data-i18n="m.5p">Fast cuts, edit zooms, one-word captions and sound effects. The hook is cut first, in 3 to 4 versions ready to test.</p></div>
       <div class="step"><span class="mono">06</span><h3 data-i18n="m.6h">Deliver clean</h3><p data-i18n="m.6p">One final MP4 plus the editable project, with a fixed file name so nobody gets lost between versions.</p></div>
     </div>
     <h3 class="sub" data-i18n="c.sub">What every cut is doing</h3>
     <div class="steps">
-      <div class="step"><span class="mono">01</span><h3 data-i18n="c.1h">Hook</h3><p data-i18n="c.1p">The opening line and first image get their own edit. I treat them as the part of the ad that most needs testing.</p></div>
-      <div class="step"><span class="mono">02</span><h3 data-i18n="c.2h">Hold</h3><p data-i18n="c.2p">Pacing, captions and a new visual beat every few seconds keep attention moving through the body.</p></div>
-      <div class="step"><span class="mono">03</span><h3 data-i18n="c.3h">Proof</h3><p data-i18n="c.3p">Demos, comparisons and social proof sit where the viewer's doubt appears, not at the end.</p></div>
-      <div class="step"><span class="mono">04</span><h3 data-i18n="c.4h">Close</h3><p data-i18n="c.4p">One clear offer and one call to action, placed when the viewer is ready to act.</p></div>
+      <div class="step"><span class="mono">01</span><h3 data-i18n="c.1h">Hook</h3><p data-i18n="c.1p">The opening line and first image get their own edit. I cut 3 to 4 versions for the same body: two modeled on hooks that already scale, one bolder idea worth testing.</p><span class="mono kpi" data-i18n="c.1k">Read by hook rate</span></div>
+      <div class="step"><span class="mono">02</span><h3 data-i18n="c.2h">Hold</h3><p data-i18n="c.2p">Pacing, captions and a new visual beat every few seconds keep attention moving through the body.</p><span class="mono kpi" data-i18n="c.2k">Read by hold rate</span></div>
+      <div class="step"><span class="mono">03</span><h3 data-i18n="c.3h">Proof</h3><p data-i18n="c.3p">Demos, comparisons and social proof sit where the viewer's doubt appears, not at the end.</p><span class="mono kpi" data-i18n="c.3k">Read by CTR and CPC</span></div>
+      <div class="step"><span class="mono">04</span><h3 data-i18n="c.4h">Close</h3><p data-i18n="c.4p">One clear offer and one call to action, placed when the viewer is ready to act.</p><span class="mono kpi" data-i18n="c.4k">Read by CPA</span></div>
+    </div>
+    <h3 class="sub" data-i18n="n.sub">How I read the numbers</h3>
+    <div class="steps num">
+      <div class="step"><span class="mono">CPA</span><h3 data-i18n="n.1h">CPA decides</h3><p data-i18n="n.1p">It is the number that decides if an ad lives. The other metrics tell me what to change in the edit.</p></div>
+      <div class="step"><span class="mono">Hook rate</span><h3 data-i18n="n.2h">Low hook rate</h3><p data-i18n="n.2p">I change the first three seconds: a new opening line, a new first image, a new pattern break.</p></div>
+      <div class="step"><span class="mono">Hold rate</span><h3 data-i18n="n.3h">The hook works, hold drops</h3><p data-i18n="n.3p">I fix the pacing of the body and move the proof to where the doubt shows up.</p></div>
+      <div class="step"><span class="mono">CPC</span><h3 data-i18n="n.4h">Cheap clicks, no sales</h3><p data-i18n="n.4p">The hook is stopping curious people, not buyers. I rework the opening for the right person.</p></div>
     </div>
   </div>
 </section>
@@ -370,7 +382,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
         <p class="grp" data-i18n="s.g.soft">Software</p>
         <ul class="tags"><li>CapCut</li><li>Premiere Pro</li></ul>
         <p class="grp" data-i18n="s.g.craft">Craft</p>
-        <ul class="tags" data-i18n="s.craft.list"><li>Hook-first pacing</li><li>Captions</li><li>Edit zooms</li><li>Sound design</li><li>Retention cuts</li><li>Hook variants</li></ul>
+        <ul class="tags" data-i18n="s.craft.list"><li>Hook-first pacing</li><li>One-word captions</li><li>Edit zooms</li><li>Sound design</li><li>Retention cuts</li><li>Hook variants</li><li>Creative testing</li></ul>
       </div>
     </div>
   </div>
@@ -382,7 +394,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
       <img class="me gone" id="me" src="media/miguel.jpg" alt="Miguel Albert">
       <div>
         <div class="sec-h" style="margin-bottom:20px"><h2 data-i18n="a.h2">Who is cutting your ad</h2></div>
-        <p data-i18n="a.1">I'm Miguel Albert, but you can call me Albert. I'm from Teresina, Piauí, Brazil. I started in computer science, became a video maker, then edited direct-response ads and VSLs that sold millions of dollars.</p>
+        <p data-i18n="a.1">I'm Miguel Albert, but you can call me Albert. I'm from Teresina, Piauí, Brazil. I started in computer science, became a video maker, then edited direct-response ads and VSLs that sold millions of dollars, in health niches like weight loss, blood sugar, memory and men's health.</p>
         <p data-i18n="a.2">Today my focus is AI video ads that sell for brands. I bring that direct-response discipline into every ad and produce the scenes with AI: UGC, animation and talking-head. I work remote, in Portuguese and conversational English, and I take feedback fast.</p>
       </div>
     </div>
@@ -395,7 +407,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     <p data-i18n="cl.p">Send me a video and I'll make a test edit. Every way to reach me is below.</p>
     <h3 class="wwh" data-i18n="w.h">How we'd work</h3>
     <ol class="ww">
-      <li><span class="mono">01</span><span data-i18n="w.1">You send the brief</span></li>
+      <li><span class="mono">01</span><span data-i18n="w.1">You send the brief: script, hooks and references</span></li>
       <li><span class="mono">02</span><span data-i18n="w.2">I break down the script and plan every scene</span></li>
       <li><span class="mono">03</span><span data-i18n="w.3">I produce and cut the first version</span></li>
       <li><span class="mono">04</span><span data-i18n="w.4">You review, I revise</span></li>
@@ -457,7 +469,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     'sv.1h':'Anúncios UGC e de depoimento com IA','sv.1p':'Anúncios no estilo creator, com avatar escolhido e cada cena gerada, editados para parecer UGC real. Sem gravação, sem esperar creator.',
     'sv.2h':'Anúncios animados e em claymation','sv.2p':'Anúncios em 3D, estilo Pixar e claymation que explicam o produto com uma história e prendem a atenção até a revelação.',
     'sv.3h':'Talking-head e cenário de podcast','sv.3p':'Anúncios com fundador, especialista ou em formato de podcast, cortados rente à fala, com legendas palavra por palavra e prova na tela.',
-    'sv.4h':'Variações de gancho e iterações','sv.4p':'Novos ganchos e recortes de um anúncio vencedor, feitos para teste de criativo, para o que já funciona durar mais.',
+    'sv.4h':'Variações de gancho e iterações','sv.4p':'Novos ganchos e recortes de um anúncio vencedor: dois modelados em aberturas que já funcionam, uma ideia mais ousada. Quando o corpo funciona, você testa o gancho, não o anúncio inteiro.',
     'sv.5h':'Qualquer anúncio vencedor, refeito para a sua marca','sv.5p':'Me mande um anúncio que está vendendo no seu mercado. Eu modelo a estrutura e trago para o seu produto, com a sua oferta e a sua cara.',
     'sv.note':'Vertical 9:16 primeiro, para Meta, TikTok, YouTube Shorts e Reels. Já tem material gravado? Também edito o UGC e o conteúdo dos seus creators.',
     'm.h2':'Como um anúncio é feito',
@@ -466,27 +478,32 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     'm.2h':'Dar vida à copy','m.2p':'Você manda o roteiro e as referências. Eu destrincho a copy fala por fala e planejo a cena que vende cada uma.',
     'm.3h':'Aprovar rosto e produto','m.3p':'O personagem e o produto são aprovados antes de gerar qualquer cena, para ficarem iguais em todos os cortes.',
     'm.4h':'Provar cada fala','m.4p':'Cada fala do roteiro ganha uma cena que a mostra, e a expressão combina com a fala. Tudo é vídeo em movimento.',
-    'm.5h':'Cortar para retenção','m.5p':'Cortes rápidos, zooms de edição, legendas e efeitos sonoros, com o gancho editado primeiro e testado sozinho.',
+    'm.5h':'Cortar para retenção','m.5p':'Cortes rápidos, zooms de edição, legendas de uma palavra por vez e efeitos sonoros. O gancho é editado primeiro, em 3 a 4 versões prontas para testar.',
     'm.6h':'Entregar limpo','m.6p':'Um MP4 final e o projeto editável, com nome de arquivo fixo para ninguém se perder entre versões.',
     'c.sub':'O que cada corte está fazendo',
-    'c.1h':'Gancho','c.1p':'A primeira fala e a primeira imagem ganham uma edição própria. Trato isso como a parte do anúncio que mais precisa de teste.',
-    'c.2h':'Retenção','c.2p':'Ritmo, legendas e uma batida visual nova a cada poucos segundos mantêm a atenção no corpo do anúncio.',
-    'c.3h':'Prova','c.3p':'Demonstrações, comparações e prova social ficam onde a dúvida do espectador aparece, não no final.',
-    'c.4h':'Fechamento','c.4p':'Uma oferta clara e um CTA, colocados quando o espectador está pronto para agir.',
+    'c.1h':'Gancho','c.1p':'A primeira fala e a primeira imagem ganham uma edição própria. Edito 3 a 4 versões para o mesmo corpo: duas modeladas em ganchos que já escalam, uma ideia mais ousada para testar.','c.1k':'Medido pelo hook rate',
+    'c.2h':'Retenção','c.2p':'Ritmo, legendas e uma batida visual nova a cada poucos segundos mantêm a atenção no corpo do anúncio.','c.2k':'Medido pelo hold rate',
+    'c.3h':'Prova','c.3p':'Demonstrações, comparações e prova social ficam onde a dúvida do espectador aparece, não no final.','c.3k':'Medido pelo CTR e pelo CPC',
+    'c.4h':'Fechamento','c.4p':'Uma oferta clara e um CTA, colocados quando o espectador está pronto para agir.','c.4k':'Medido pelo CPA',
+    'n.sub':'Como eu leio os números',
+    'n.1h':'O CPA decide','n.1p':'É o número que decide se um anúncio continua no ar. As outras métricas me dizem o que mudar na edição.',
+    'n.2h':'Hook rate baixo','n.2p':'Troco os três primeiros segundos: uma nova fala de abertura, uma nova primeira imagem, uma nova quebra de padrão.',
+    'n.3h':'O gancho funciona, a retenção cai','n.3p':'Ajusto o ritmo do corpo e levo a prova para onde a dúvida aparece.',
+    'n.4h':'Clique barato, sem venda','n.4p':'O gancho está parando curiosos, não compradores. Refaço a abertura para a pessoa certa.',
     's.h2':'Com o que eu trabalho',
     's.p':'Os formatos que edito e as ferramentas por trás de cada anúncio.',
     's.formats':'Formatos',
     's.formats.list':'<li>UGC</li><li>UGC com IA</li><li>Anúncios em 3D</li><li>Anúncios em claymation</li><li>Talking-head</li><li>Anúncios em cenário de podcast</li><li>Anúncios de depoimento</li><li>Anúncios curtos</li><li>E muito mais</li>',
     's.ai':'Ferramentas de IA','s.g.video':'Vídeo','s.g.image':'Imagem e upscale','s.g.voice':'Voz',
     's.edit':'Edição','s.g.soft':'Programas','s.g.craft':'Técnica',
-    's.craft.list':'<li>Ritmo focado no gancho</li><li>Legendas</li><li>Zooms de edição</li><li>Sound design</li><li>Cortes de retenção</li><li>Variações de gancho</li>',
+    's.craft.list':'<li>Ritmo focado no gancho</li><li>Legendas de uma palavra</li><li>Zooms de edição</li><li>Sound design</li><li>Cortes de retenção</li><li>Variações de gancho</li><li>Teste de criativo</li>',
     'a.h2':'Quem está editando o seu anúncio',
-    'a.1':'Sou o Miguel Albert, mas pode me chamar de Albert. Sou de Teresina, Piauí, Brasil. Comecei em ciência da computação, virei video maker e depois editei anúncios e VSLs de direct response que venderam milhões de dólares.',
+    'a.1':'Sou o Miguel Albert, mas pode me chamar de Albert. Sou de Teresina, Piauí, Brasil. Comecei em ciência da computação, virei video maker e depois editei anúncios e VSLs de direct response que venderam milhões de dólares, em nichos de saúde como emagrecimento, glicemia, memória e saúde masculina.',
     'a.2':'Hoje meu foco é criar vídeos com IA que vendem para marcas. Levo essa disciplina de direct response para cada anúncio e produzo as cenas com IA: UGC, animação e talking-head. Trabalho remoto, em português e inglês conversacional, e respondo rápido a feedback.',
     'cl.h2':'Tem um briefing? <em>Manda.</em>',
     'cl.p':'Mande um vídeo e eu faço uma edição de teste. Aqui embaixo estão todos os jeitos de falar comigo.',
     'w.h':'Como a gente trabalharia',
-    'w.1':'Você manda o briefing','w.2':'Eu decupo o roteiro e planejo cada cena','w.3':'Eu produzo e edito a primeira versão','w.4':'Você revisa, eu ajusto','w.5':'Você recebe o MP4 final e o projeto editável',
+    'w.1':'Você manda o briefing: roteiro, ganchos e referências','w.2':'Eu decupo o roteiro e planejo cada cena','w.3':'Eu produzo e edito a primeira versão','w.4':'Você revisa, eu ajusto','w.5':'Você recebe o MP4 final e o projeto editável',
     'f.1':'Miguel Albert · Criador de vídeo com IA e editor de vídeo DTC · miguelalbert38@gmail.com',
     'f.2':'<a href="cv.html">CV</a> · Teresina, Brasil · UTC−3'
   };
