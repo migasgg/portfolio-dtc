@@ -51,29 +51,31 @@ ul.b li{margin:0 0 6px}
 .skills{display:grid;grid-template-columns:150px 1fr;gap:8px 16px;margin:0}
 .skills dt{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;padding-top:3px}
 .skills dd{margin:0}
+.did{margin:10px 0 0;font-size:14.5px;color:var(--muted)}.did b{color:var(--paper)}
 @media (max-width:600px){.work .w,.skills{grid-template-columns:1fr}}
 
 /* print: clean one-page CV on white */
 @media print{
-  @page{size:A4;margin:11mm 13mm}
+  @page{size:A4;margin:9mm 12mm}
   :root{color-scheme:light}
-  body{background:#fff;color:#111;font-size:10.2pt;line-height:1.4}
+  body{background:#fff;color:#111;font-size:9.7pt;line-height:1.34}
   .bar{display:none}
   .page{padding:0;max-width:none}
   a{color:#111;text-decoration:none}
-  h1{font-size:26pt}
+  h1{font-size:23pt}
   .role{font-size:12pt;color:#c9401f}
   .meta{font-size:9.2pt;color:#444;margin-top:8px}
   .meta a{color:#111}
-  h2{color:#555;border-top:1px solid #ccc;margin:13px 0 7px;padding-top:8px;font-size:8.2pt}
+  h2{color:#555;border-top:1px solid #ccc;margin:9px 0 5px;padding-top:6px;font-size:8pt}
   .job h3{font-size:12pt}
   .job .when,.work .w span.k,.skills dt{color:#555}
   .job .when{font-size:8.2pt;margin:2px 0 6px}
-  ul.b li{margin:0 0 3px}
+  ul.b li{margin:0 0 1.5px}
   p{margin:0 0 6px}
-  .work{gap:5px}
+  .work{gap:3px}
   .work .w{grid-template-columns:150px 1fr}.work .w span.k{white-space:nowrap}
-  .skills{grid-template-columns:150px 1fr;gap:4px 12px}
+  .skills{grid-template-columns:150px 1fr;gap:2px 12px}
+  .did{font-size:9pt;color:#333;margin:4px 0 0}.did b{color:#111}
   h2,.job,.w{break-inside:avoid}
 }
 </style>
@@ -107,34 +109,41 @@ ul.b li{margin:0 0 6px}
   </header>
 
   <h2>Summary</h2>
-  <p>I edit and build paid ads for DTC brands, from UGC and talking-head to 3D and claymation, with an AI video stack behind them. I started in computer science, moved into video making, then into editing paid ads and VSLs for direct response, and today I put all of that into DTC creative. The first three seconds get their own edit, every line of the script gets a scene that proves it, and I cut for retention. Two years shipping ads in an operation with a high quality bar. Remote, UTC−3, Portuguese native and conversational English.</p>
+  <p>I create and edit paid ads with AI for DTC brands: UGC, talking-head, 3D, claymation and more. Behind that are 2+ years editing direct-response ads and VSLs that sold millions of dollars in health niches (weight loss, blood sugar, memory, men's health). I write the hook first, in 3 to 4 versions, give every line a scene that proves it, edit for retention, and read hook rate, hold rate, CTR, CPA and ROAS to decide the next round. Remote, UTC−3, native Portuguese, conversational English.</p>
 
   <h2>Experience</h2>
   <div class="job">
-    <h3>Video Editor · Direct-response ad operation</h3>
-    <p class="when">2+ years · Remote · Company confidential</p>
+    <h3>Video Editor · Direct-response ad operation (confidential)</h3>
+    <p class="when">Full-time · Remote · May 2024 – Present</p>
     <ul class="b">
-      <li>Cut paid ads and VSLs every day, shipping 3+ ads a day in an operation that expects the cleanest cuts on the team.</li>
-      <li>Moved from editing for direct response into DTC creative, bringing hook-first pacing, captions and proof placement into every ad.</li>
-      <li>Produce 2 polished DTC ads a day, from a reference that already works to the final export.</li>
+      <li>Edit direct-response ads and VSLs for health supplement offers (blood sugar, memory, men's health, weight loss) that sold millions of dollars, shipping 3+ ads a day.</li>
+      <li>Produce DTC creatives with AI end to end, about 2 polished ads a day: UGC, talking-head and animated ads, from a winning reference to the final export.</li>
+      <li>Cut every ad with 3–4 hook variants for testing and adjust the edit from the numbers (hook rate, hold rate, CTR, CPA).</li>
+      <li>Use HeyGen for AI avatars and talking-head production.</li>
+      <li>Keep ads within Meta and TikTok ad policies: AI disclosure and supplement claims.</li>
     </ul>
   </div>
 
   <h2>Selected work (concept brands)</h2>
   <div class="work">
-    <div class="w"><span class="k">UGC · 33s</span><span><b>The night I finally slept</b> (Hush, sleep). A testimonial that opens on the result, walks back through the problem and lands on the product.</span></div>
-    <div class="w"><span class="k">UGC · 37s</span><span><b>Bet me a hundred</b> (Tavola, wine glasses). A challenge format: the bet is the hook, a numbered blind test holds attention, the reveal pays it off.</span></div>
-    <div class="w"><span class="k">Claymation · 47s</span><span><b>The $180 jar vs the $29 serum</b> (Lumivee, skincare). Claymation characters argue the comparison, with keyword captions and fast scene changes.</span></div>
     <div class="w"><span class="k">3D animated · 67s</span><span><b>Why your teeth stay yellow</b> (Brightmoor, oral care). Story-driven animation, one scene per beat, burned-in captions, product reveal at the turn.</span></div>
+    <div class="w"><span class="k">Claymation · 47s</span><span><b>The $180 jar vs the $29 serum</b> (Lumivee, skincare). Claymation characters argue the comparison, with keyword captions and fast scene changes.</span></div>
+    <div class="w"><span class="k">UGC · 33s</span><span><b>The night I finally slept</b> (Hush, sleep). A testimonial that opens on the result, walks back through the problem and lands on the product.</span></div>
     <div class="w"><span class="k">Podcast-set · 63s</span><span><b>Kestrel</b> (hair care). Several speakers on a podcast set, cut tight to the line, with word-by-word captions.</span></div>
+    <div class="w"><span class="k">UGC · 37s</span><span><b>Bet me a hundred</b> (Tavola, wine glasses). A challenge format: the bet is the hook, a numbered blind test holds attention, the reveal pays it off.</span></div>
   </div>
+  <p class="did"><b>What I did on each:</b> concept, script modeled on an ad that sold, prompts and scene direction, every clip checked, edit, captions and sound. AI generated the frames and voices.</p>
 
   <h2>Skills</h2>
   <dl class="skills">
-    <dt>Editing</dt><dd>CapCut, Premiere Pro, hook-first pacing, captions, edit zooms, sound design, retention cuts</dd>
-    <dt>AI video</dt><dd>Higgsfield, Google Flow, Omni Flash, Kling, Seedance, Wan, Magnific, Nano Banana, Muse</dd>
-    <dt>Audio</dt><dd>VoiceStudio (voice cloning and TTS), loudness normalization</dd>
-    <dt>Creative</dt><dd>Ad breakdowns, copy modeling from a reference, casting, start frames, B-roll, hook variants</dd>
+    <dt>Editing</dt><dd>CapCut, Premiere Pro, hook-first pacing, one-word captions, edit zooms, sound design, retention cuts</dd>
+    <dt>AI video</dt><dd>Higgsfield, Google Flow, Veo 3.1, Omni Flash, Kling, Seedance, Wan, Muse, HeyGen</dd>
+    <dt>AI image</dt><dd>Nano Banana, Magnific</dd>
+    <dt>AI voice</dt><dd>ElevenLabs, MiniMax, VoiceStudio (voice cloning and TTS)</dd>
+    <dt>AI writing</dt><dd>Claude and ChatGPT for scripts, breakdowns and prompts</dd>
+    <dt>Performance</dt><dd>Hook rate, hold rate, CTR, CPC, CPA, ROAS, creative testing, ad library research</dd>
+    <dt>Compliance</dt><dd>Meta and TikTok ad policies, AI disclosure, supplement and cosmetic claims</dd>
+    <dt>Workflow</dt><dd>Slack, ClickUp, Google Drive</dd>
     <dt>Languages</dt><dd>Portuguese (native), English (conversational)</dd>
   </dl>
 
@@ -156,34 +165,41 @@ ul.b li{margin:0 0 6px}
   </header>
 
   <h2>Resumo</h2>
-  <p>Edito e construo anúncios pagos para marcas DTC, de UGC e talking-head a 3D e claymation, com uma stack de vídeo com IA por trás. Comecei em ciência da computação, passei por video maker, depois editei anúncios pagos e VSLs de direct response, e hoje levo tudo isso para criativos DTC. Os três primeiros segundos ganham uma edição própria, cada fala do roteiro ganha uma cena que a prova, e corto pensando em retenção. Dois anos entregando anúncios em uma operação com padrão alto de qualidade. Remoto, UTC−3, português nativo e inglês conversacional.</p>
+  <p>Crio e edito anúncios pagos com IA para marcas DTC: UGC, talking-head, 3D, claymation e mais. Por trás disso estão 2+ anos editando anúncios de resposta direta e VSLs que venderam milhões de dólares em nichos de saúde (emagrecimento, glicemia, memória, saúde masculina). Faço o hook primeiro, em 3 a 4 versões, dou a cada fala uma cena que a prova, edito para retenção e leio hook rate, hold rate, CTR, CPA e ROAS para decidir a próxima rodada. Remoto, UTC−3, português nativo, inglês conversacional.</p>
 
   <h2>Experiência</h2>
   <div class="job">
-    <h3>Editor de vídeo · Operação de anúncios de direct response</h3>
-    <p class="when">2+ anos · Remoto · Empresa confidencial</p>
+    <h3>Editor de vídeo · Operação de anúncios de resposta direta (confidencial)</h3>
+    <p class="when">Tempo integral · Remoto · Mai 2024 – atual</p>
     <ul class="b">
-      <li>Editei anúncios pagos e VSLs todos os dias, entregando 3+ anúncios por dia em uma operação que espera os cortes mais limpos do time.</li>
-      <li>Migrei da edição de direct response para criativos DTC, levando ritmo focado no gancho, legendas e posicionamento de prova para cada anúncio.</li>
-      <li>Produzo 2 anúncios DTC bem acabados por dia, da referência que já funciona até o export final.</li>
+      <li>Edito anúncios de resposta direta e VSLs para ofertas de suplementos de saúde (glicemia, memória, saúde masculina, emagrecimento) que venderam milhões de dólares, entregando 3+ anúncios por dia.</li>
+      <li>Produzo criativos DTC com IA de ponta a ponta, cerca de 2 anúncios bem acabados por dia: UGC, talking-head e animados, da referência vencedora ao export final.</li>
+      <li>Edito cada anúncio com 3–4 variações de hook para teste e ajusto a edição pelos números (hook rate, hold rate, CTR, CPA).</li>
+      <li>Uso o HeyGen para avatares de IA e produção de talking-head.</li>
+      <li>Mantenho os anúncios dentro das políticas de anúncios da Meta e do TikTok: aviso de uso de IA e alegações de suplementos.</li>
     </ul>
   </div>
 
   <h2>Trabalhos selecionados (marcas conceito)</h2>
   <div class="work">
-    <div class="w"><span class="k">UGC · 33s</span><span><b>The night I finally slept</b> (Hush, sono). Depoimento que abre no resultado, volta ao problema e chega ao produto.</span></div>
-    <div class="w"><span class="k">UGC · 37s</span><span><b>Bet me a hundred</b> (Tavola, taças de vinho). Formato de desafio: a aposta é o gancho, um teste cego numerado prende a atenção e a revelação fecha.</span></div>
-    <div class="w"><span class="k">Claymation · 47s</span><span><b>The $180 jar vs the $29 serum</b> (Lumivee, skincare). Personagens de massinha discutem a comparação, com legendas de palavra-chave e trocas rápidas de cena.</span></div>
     <div class="w"><span class="k">Animação 3D · 67s</span><span><b>Why your teeth stay yellow</b> (Brightmoor, saúde bucal). Animação narrativa, uma cena por batida, legendas queimadas e revelação do produto na virada.</span></div>
+    <div class="w"><span class="k">Claymation · 47s</span><span><b>The $180 jar vs the $29 serum</b> (Lumivee, skincare). Personagens de massinha discutem a comparação, com legendas de palavra-chave e trocas rápidas de cena.</span></div>
+    <div class="w"><span class="k">UGC · 33s</span><span><b>The night I finally slept</b> (Hush, sono). Depoimento que abre no resultado, volta ao problema e chega ao produto.</span></div>
     <div class="w"><span class="k">Podcast · 63s</span><span><b>Kestrel</b> (cabelo). Vários falantes em um cenário de podcast, cortados rente à fala, com legendas palavra por palavra.</span></div>
+    <div class="w"><span class="k">UGC · 37s</span><span><b>Bet me a hundred</b> (Tavola, taças de vinho). Formato de desafio: a aposta é o gancho, um teste cego numerado prende a atenção e a revelação fecha.</span></div>
   </div>
+  <p class="did"><b>O que eu fiz em cada um:</b> conceito, roteiro modelado num anúncio que vendeu, prompts e direção de cena, revisão de cada clipe, edição, legendas e som. A IA gerou as imagens e as vozes.</p>
 
   <h2>Competências</h2>
   <dl class="skills">
-    <dt>Edição</dt><dd>CapCut, Premiere Pro, ritmo focado no gancho, legendas, zooms de edição, sound design, cortes de retenção</dd>
-    <dt>Vídeo com IA</dt><dd>Higgsfield, Google Flow, Omni Flash, Kling, Seedance, Wan, Magnific, Nano Banana, Muse</dd>
-    <dt>Áudio</dt><dd>VoiceStudio (clonagem de voz e TTS), normalização de loudness</dd>
-    <dt>Criativo</dt><dd>Decupagem de anúncios, copy modelada a partir de referência, casting, start frames, B-roll, variações de gancho</dd>
+    <dt>Edição</dt><dd>CapCut, Premiere Pro, ritmo focado no hook, legendas de uma palavra, zooms de edição, sound design, cortes de retenção</dd>
+    <dt>Vídeo com IA</dt><dd>Higgsfield, Google Flow, Veo 3.1, Omni Flash, Kling, Seedance, Wan, Muse, HeyGen</dd>
+    <dt>Imagem com IA</dt><dd>Nano Banana, Magnific</dd>
+    <dt>Voz com IA</dt><dd>ElevenLabs, MiniMax, VoiceStudio (clonagem de voz e TTS)</dd>
+    <dt>Escrita com IA</dt><dd>Claude e ChatGPT para roteiros, decupagens e prompts</dd>
+    <dt>Performance</dt><dd>Hook rate, hold rate, CTR, CPC, CPA, ROAS, teste de criativos, pesquisa em biblioteca de anúncios</dd>
+    <dt>Compliance</dt><dd>Políticas de anúncios da Meta e do TikTok, aviso de IA, alegações de suplementos e cosméticos</dd>
+    <dt>Fluxo de trabalho</dt><dd>Slack, ClickUp, Google Drive</dd>
     <dt>Idiomas</dt><dd>Português (nativo), inglês (conversacional)</dd>
   </dl>
 
